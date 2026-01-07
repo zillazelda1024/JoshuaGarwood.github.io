@@ -88,6 +88,29 @@ function scrollProjects(direction) {
 }
 </script>
 
+<script>
+let currentIndex = 0;
+
+function moveCarousel(direction) {
+  const projects = document.querySelectorAll('.carousel .project');
+  currentIndex += direction;
+
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex >= projects.length) currentIndex = projects.length - 1;
+
+  projects.forEach((project, index) => {
+    project.classList.toggle('active', index === currentIndex);
+  });
+
+  const carousel = document.getElementById('carousel');
+  const projectWidth = projects[0].offsetWidth + 48;
+
+  carousel.scrollTo({
+    left: projectWidth * currentIndex,
+    behavior: 'smooth'
+  });
+}
+</script>
 
 </body>
 </html>
