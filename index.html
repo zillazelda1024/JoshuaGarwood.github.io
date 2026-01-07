@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const lastClone = projects[projects.length - 1].cloneNode(true);
 
   carousel.appendChild(firstClone);
-  carousel.insertBeforeBefore = carousel.insertBefore(lastClone, projects[0]);
+  carousel.insertBefore(lastClone, projects[0]);
 
   projects = Array.from(carousel.children);
 
@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+
 
 </body>
 </html>
