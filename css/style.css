@@ -8,6 +8,13 @@ html, body {
   padding: 0;
 }
 
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+
 /* Global page background */
 body {
   font-family: Arial, sans-serif;
@@ -23,7 +30,17 @@ body {
 }
 
 .nav h1 {
-  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
 }
 
 .nav a {
