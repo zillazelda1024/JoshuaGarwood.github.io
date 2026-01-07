@@ -4,22 +4,16 @@
   <meta charset="UTF-8">
   <title>Joshua Garwood | Game Design Portfolio</title>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
 
-  <style>
-    body {
-      font-family: 'Inter', Arial, sans-serif;
-      background-color: #f3efe6;
-      color: #222;
-      line-height: 1.7;
-      margin: 0;
-    }
-  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- ================= NAV ================= -->
 <header class="nav">
   <h1>Joshua Garwood Game Design Portfolio</h1>
   <nav>
@@ -28,85 +22,84 @@
   </nav>
 </header>
 
+<!-- ================= ABOUT ================= -->
 <section id="about" class="section">
   <h2>About Me</h2>
   <p>
-    My name is Joshua Garwood, and I am a Game Designer and Developer with six years of experience in the game development industry, honed through both college and university education. I possess a strong passion for creating and designing engaging games and have successfully contributed to various projects throughout my academic journey, alongside numerous personal projects.
-
-    I am skilled in multiple facets of game development, including coding and scripting in C#, 3D modeling and animation using Blender, 2D and 3D animation, as well as pixel art creation. Additionally, I have experience in story and world design, as well as world generation utilizing procedural generation techniques.
+    My name is Joshua Garwood, and I am a Game Designer and Developer with six years of experience in the game development industry, honed through both college and university education.
+    I am skilled in C#, Blender, 2D/3D animation, pixel art, story design, and procedural generation.
   </p>
+</section>
+
+<!-- ================= PROJECTS ================= -->
 <section id="projects" class="section">
   <h2>Projects</h2>
 
   <div class="carousel-wrapper">
+
+    <!-- Left Arrow -->
     <button class="carousel-btn left" onclick="moveCarousel(-1)">◀</button>
 
+    <!-- Carousel -->
     <div class="carousel" id="carousel">
-      <!-- Project 1 -->
+
       <div class="project active">
         <img src="images/portfoliowebspageimage.webp" class="project-image" alt="">
         <h3>PCG Dungeon Generator (2024)</h3>
         <p class="project-subtitle">University Dissertation Artifact</p>
       </div>
 
-      <!-- Project 2 -->
       <div class="project">
         <img src="images/portfoliowebspageimage2.webp" class="project-image" alt="">
         <h3>Nightmare (2024)</h3>
         <p class="project-subtitle">Horror Game Project</p>
       </div>
 
-      <!-- Project 3 -->
       <div class="project">
         <img src="images/portfoliowebspageimage3.webp" class="project-image" alt="">
         <h3>Where Am I? (2023)</h3>
         <p class="project-subtitle">Puzzle Exploration Game</p>
       </div>
 
-      <!-- Project 4 -->
       <div class="project">
         <img src="images/portfoliowebspageimage4.webp" class="project-image" alt="">
         <h3>Spell Quest (2019)</h3>
         <p class="project-subtitle">Fantasy Adventure Game</p>
       </div>
+
     </div>
 
+    <!-- Right Arrow -->
     <button class="carousel-btn right" onclick="moveCarousel(1)">▶</button>
+
   </div>
 </section>
 
-
-  <script>
-function scrollProjects(direction) {
-  const container = document.getElementById('projectsScroll');
-  const projectWidth = container.querySelector('.project').offsetWidth + 48;
-
-  container.scrollBy({
-    left: projectWidth * direction,
-    behavior: 'smooth'
-  });
-}
-</script>
-
+<!-- ================= SCRIPT ================= -->
 <script>
 let currentIndex = 0;
 
 function moveCarousel(direction) {
-  const projects = document.querySelectorAll('.carousel .project');
-  currentIndex += direction;
+  const carousel = document.getElementById('carousel');
+  const projects = carousel.querySelectorAll('.project');
 
-  if (currentIndex < 0) currentIndex = 0;
-  if (currentIndex >= projects.length) currentIndex = projects.length - 1;
+  currentIndex += direction;
+  currentIndex = Math.max(0, Math.min(currentIndex, projects.length - 1));
 
   projects.forEach((project, index) => {
     project.classList.toggle('active', index === currentIndex);
   });
 
-  const carousel = document.getElementById('carousel');
-  const projectWidth = projects[0].offsetWidth + 48;
+  const activeProject = projects[currentIndex];
+
+  const carouselWidth = carousel.offsetWidth;
+  const projectCenter =
+    activeProject.offsetLeft + activeProject.offsetWidth / 2;
+
+  const scrollPosition = projectCenter - carouselWidth / 2;
 
   carousel.scrollTo({
-    left: projectWidth * currentIndex,
+    left: scrollPosition,
     behavior: 'smooth'
   });
 }
