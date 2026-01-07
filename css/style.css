@@ -74,3 +74,8 @@ body {
   margin-bottom: 2rem;
 }
 
+.project-description {
+  font-size: 0.95rem;
+  white-space: pre-line;
+}
+
