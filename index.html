@@ -82,16 +82,25 @@ let currentIndex = 0;
 function moveCarousel(direction) {
   const carousel = document.getElementById('carousel');
   const projects = carousel.querySelectorAll('.project');
+  const total = projects.length;
 
+  // Update index
   currentIndex += direction;
-  currentIndex = Math.max(0, Math.min(currentIndex, projects.length - 1));
 
+  // LOOP LOGIC
+  if (currentIndex < 0) {
+    currentIndex = total - 1;
+  } else if (currentIndex >= total) {
+    currentIndex = 0;
+  }
+
+  // Update active class
   projects.forEach((project, index) => {
     project.classList.toggle('active', index === currentIndex);
   });
 
+  // Center active project
   const activeProject = projects[currentIndex];
-
   const carouselWidth = carousel.offsetWidth;
   const projectCenter =
     activeProject.offsetLeft + activeProject.offsetWidth / 2;
@@ -104,6 +113,7 @@ function moveCarousel(direction) {
   });
 }
 </script>
+
 
 </body>
 </html>
