@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.getElementById("carousel");
   let projects = Array.from(carousel.children);
 
-  // Clone first and last for infinite loop
+  // Clone first and last
   const firstClone = projects[0].cloneNode(true);
   const lastClone = projects[projects.length - 1].cloneNode(true);
 
@@ -96,7 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.moveCarousel = function(direction) {
     currentIndex += direction;
     centerCurrent(true);
-    carousel.addEventListener("transitionend", handleLoop, { once: true });
+
+    // Wait for scroll animation to finish, then fix loop
+    setTimeout(checkLoop, 400);
   };
 
   function centerCurrent(smooth = true) {
@@ -121,12 +123,14 @@ document.addEventListener("DOMContentLoaded", () => {
     projects[currentIndex].classList.add("active");
   }
 
-  function handleLoop() {
+  function checkLoop() {
+    // If on clone of last (far left)
     if (currentIndex === 0) {
       currentIndex = projects.length - 2;
       centerCurrent(false);
     }
 
+    // If on clone of first (far right)
     if (currentIndex === projects.length - 1) {
       currentIndex = 1;
       centerCurrent(false);
@@ -135,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+
 
 
 </body>
