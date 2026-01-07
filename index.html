@@ -126,42 +126,80 @@ I am skilled in multiple facets of game development, including coding and script
 
 <!-- ================= SCRIPT ================= -->
 <script>
-let currentIndex = 0;
-
-function moveCarousel(direction) {
-  const carousel = document.getElementById('carousel');
+function initCarousel(wrapper) {
+  const carousel = wrapper.querySelector('.carousel');
   const projects = carousel.querySelectorAll('.project');
-  const total = projects.length;
+  let currentIndex = 0;
 
-  // Update index
-  currentIndex += direction;
+  function move(direction) {
+    const total = projects.length;
+    currentIndex += direction;
 
-  // LOOP LOGIC
-  if (currentIndex < 0) {
-    currentIndex = total - 1;
-  } else if (currentIndex >= total) {
-    currentIndex = 0;
+    // LOOP
+    if (currentIndex < 0) currentIndex = total - 1;
+    if (currentIndex >= total) currentIndex = 0;
+
+    projects.forEach((p, i) => {
+      p.classList.toggle('active', i === currentIndex);
+    });
+
+    const active = projects[currentIndex];
+    const carouselWidth = carousel.offsetWidth;
+    const projectCenter =
+      active.offsetLeft + active.offsetWidth / 2;
+
+    carousel.scrollTo({
+      left: projectCenter - carouselWidth / 2,
+      behavior: 'smooth'
+    });
   }
 
-  // Update active class
-  projects.forEach((project, index) => {
-    project.classList.toggle('active', index === currentIndex);
-  });
+  wrapper.querySelector('.carousel-btn.left')
+    .addEventListener('click', () => move(-1));
 
-  // Center active project
-  const activeProject = projects[currentIndex];
-  const carouselWidth = carousel.offsetWidth;
-  const projectCenter =
-    activeProject.offsetLeft + activeProject.offsetWidth / 2;
-
-  const scrollPosition = projectCenter - carouselWidth / 2;
-
-  carousel.scrollTo({
-    left: scrollPosition,
-    behavior: 'smooth'
-  });
+  wrapper.querySelector('.carousel-btn.right')
+    .addEventListener('click', () => move(1));
 }
+
+// Initialize ALL carousels on page
+document.querySelectorAll('.carousel-wrapper')
+  .forEach(initCarousel);
 </script>
+
+  <section class="section">
+  <h2>3D Modeling with Blender</h2>
+
+  <div class="carousel-wrapper">
+
+    <button class="carousel-btn left">◀</button>
+
+    <div class="carousel">
+
+      <div class="project active">
+        <img src="images/blender1.webp" class="project-image" alt="">
+      </div>
+
+      <div class="project">
+        <img src="images/blender2.webp" class="project-image" alt="">
+      </div>
+
+      <div class="project">
+        <img src="images/blender3.webp" class="project-image" alt="">
+      </div>
+
+      <div class="project">
+        <img src="images/blender4.webp" class="project-image" alt="">
+      </div>
+
+      <!-- Add as many as you want -->
+
+    </div>
+
+    <button class="carousel-btn right">▶</button>
+
+  </div>
+</section>
+
 
 
 </body>
