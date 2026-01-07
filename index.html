@@ -38,63 +38,43 @@
 <section id="projects" class="section">
   <h2>Projects</h2>
 
-  <!-- Scroll buttons -->
-  <div class="project-controls">
-    <button class="scroll-btn" onclick="scrollProjects(-1)">◀</button>
-    <button class="scroll-btn" onclick="scrollProjects(1)">▶</button>
-  </div>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left" onclick="moveCarousel(-1)">◀</button>
 
-  <!-- Horizontal scroll container -->
-  <div class="projects-scroll" id="projectsScroll">
+    <div class="carousel" id="carousel">
+      <!-- Project 1 -->
+      <div class="project active">
+        <img src="images/portfoliowebspageimage.webp" class="project-image" alt="">
+        <h3>PCG Dungeon Generator (2024)</h3>
+        <p class="project-subtitle">University Dissertation Artifact</p>
+      </div>
 
-    <div class="project">
-      <img src="images/portfoliowebspageimage.webp" class="project-image" alt="">
-      <h3>PCG Dungeon Generator (2024)</h3>
-      <p class="project-subtitle">University Dissertation Artifact</p>
-      <p class="project-description">
-Platform: PC
-Team Size: 1
-Project Duration: 5 months
-Engine & Tools: Unity, Photoshop, YouTube
-      </p>
+      <!-- Project 2 -->
+      <div class="project">
+        <img src="images/portfoliowebspageimage2.webp" class="project-image" alt="">
+        <h3>Nightmare (2024)</h3>
+        <p class="project-subtitle">Horror Game Project</p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project">
+        <img src="images/portfoliowebspageimage3.webp" class="project-image" alt="">
+        <h3>Where Am I? (2023)</h3>
+        <p class="project-subtitle">Puzzle Exploration Game</p>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project">
+        <img src="images/portfoliowebspageimage4.webp" class="project-image" alt="">
+        <h3>Spell Quest (2019)</h3>
+        <p class="project-subtitle">Fantasy Adventure Game</p>
+      </div>
     </div>
 
-    <div class="project">
-      <img src="images/portfoliowebspageimage2.webp" class="project-image" alt="">
-      <h3>Nightmare (2024)</h3>
-      <p class="project-subtitle">Horror Game Project</p>
-      <p class="project-description">
-Platform: PC
-Team Size: 6
-Project Duration: 3 months
-Engine & Tools: Unity
-      </p>
-    </div>
-
-    <div class="project">
-      <img src="images/portfoliowebspageimage3.webp" class="project-image" alt="">
-      <h3>Where Am I? (2023)</h3>
-      <p class="project-subtitle">Puzzle Exploration Game</p>
-      <p class="project-description">
-Platform: PC
-Team Size: Solo
-Engine & Tools: Unity
-      </p>
-    </div>
-
-    <div class="project">
-      <img src="images/portfoliowebspageimage4.webp" class="project-image" alt="">
-      <h3>Spell Quest (2019)</h3>
-      <p class="project-subtitle">Fantasy Adventure Game</p>
-      <p class="project-description">
-Platform: PC
-Team Size: Group Project
-Engine & Tools: Unity
-      </p>
-    </div>
-
+    <button class="carousel-btn right" onclick="moveCarousel(1)">▶</button>
   </div>
 </section>
+
 
   <script>
 function scrollProjects(direction) {
