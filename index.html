@@ -26,23 +26,20 @@
 <section id="about" class="section">
   <h2>About Me</h2>
   <p>
-My name is Joshua Garwood, and I am a Game Designer and Developer with six years of experience in the game development industry, honed through both college and university education. I possess a strong passion for creating and designing engaging games and have successfully contributed to various projects throughout my academic journey, alongside numerous personal projects.
-
-I am skilled in multiple facets of game development, including coding and scripting in C#, 3D modeling and animation using Blender, 2D and 3D animation, as well as pixel art creation. Additionally, I have experience in story and world design, as well as world generation utilizing procedural generation techniques.
+    My name is Joshua Garwood, and I am a Game Designer and Developer with six years of experience.
+    I specialize in C#, Blender, 2D/3D animation, pixel art, story design, and procedural generation.
   </p>
 </section>
 
-<!-- ================= PROJECTS ================= -->
+<!-- ================= PROJECTS CAROUSEL ================= -->
 <section id="projects" class="section">
   <h2>Projects</h2>
 
   <div class="carousel-wrapper">
 
-    <!-- Left Arrow -->
-    <button class="carousel-btn left" onclick="moveCarousel(-1)">◀</button>
+    <button class="carousel-btn left">◀</button>
 
-    <!-- Carousel -->
-    <div class="carousel" id="carousel">
+    <div class="carousel">
 
       <div class="project active">
         <img src="images/portfoliowebspageimage.webp" class="project-image" alt="">
@@ -67,106 +64,16 @@ I am skilled in multiple facets of game development, including coding and script
         <h3>Spell Quest (2019)</h3>
         <p class="project-subtitle">Fantasy Adventure Game</p>
       </div>
-      
-      <div class="project">
-        <img src="images/portfoliowebspageimage5.webp" class="project-image" alt="">
-        <h3>Launch Em (2022)</h3>
-        <p class="project-subtitle">Physics Base Game</p>
-      </div>
-
-      <div class="project">
-        <img src="images/portfoliowebspageimage6.webp" class="project-image" alt="">
-        <h3>Snake Odyssey 64 (2023)</h3>
-        <p class="project-subtitle">GamJam Snake Game</p>
-      </div>
-
-      <div class="project">
-        <img src="images/portfoliowebspageimage7.webp" class="project-image" alt="">
-        <h3>Run From Gary (2022)</h3>
-        <p class="project-subtitle">Horror Game</p>
-      </div>
-
-       <div class="project">
-        <img src="images/portfoliowebspageimage8.webp" class="project-image" alt="">
-        <h3>The Sacrifice (2022)</h3>
-        <p class="project-subtitle">Horror/Puzzle Game</p>
-      </div>
-
-     <div class="project">
-        <img src="images/portfoliowebspageimage9.webp" class="project-image" alt="">
-        <h3>The Letter Temple (2022)</h3>
-        <p class="project-subtitle">Puzzle Game</p>
-      </div>
-
-      <div class="project">
-        <img src="images/portfoliowebspageimage10.webp" class="project-image" alt="">
-        <h3>Bleach Tapper (2022)</h3>
-        <p class="project-subtitle">Mobile Game</p>
-      </div>
-
-      <div class="project">
-        <img src="images/portfoliowebspageimage11.webp" class="project-image" alt="">
-        <h3>Dead Meme (2021)</h3>
-        <p class="project-subtitle">FPS Game</p>
-      </div>
-
-      <div class="project">
-        <img src="images/portfoliowebspageimage12.webp" class="project-image" alt="">
-        <h3>The Haunted House (2023)</h3>
-        <p class="project-subtitle">FPS Game</p>
-      </div>
 
     </div>
 
-    <!-- Right Arrow -->
-    <button class="carousel-btn right" onclick="moveCarousel(1)">▶</button>
+    <button class="carousel-btn right">▶</button>
 
   </div>
 </section>
 
-<!-- ================= SCRIPT ================= -->
-<script>
-function initCarousel(wrapper) {
-  const carousel = wrapper.querySelector('.carousel');
-  const projects = carousel.querySelectorAll('.project');
-  let currentIndex = 0;
-
-  function move(direction) {
-    const total = projects.length;
-    currentIndex += direction;
-
-    // LOOP
-    if (currentIndex < 0) currentIndex = total - 1;
-    if (currentIndex >= total) currentIndex = 0;
-
-    projects.forEach((p, i) => {
-      p.classList.toggle('active', i === currentIndex);
-    });
-
-    const active = projects[currentIndex];
-    const carouselWidth = carousel.offsetWidth;
-    const projectCenter =
-      active.offsetLeft + active.offsetWidth / 2;
-
-    carousel.scrollTo({
-      left: projectCenter - carouselWidth / 2,
-      behavior: 'smooth'
-    });
-  }
-
-  wrapper.querySelector('.carousel-btn.left')
-    .addEventListener('click', () => move(-1));
-
-  wrapper.querySelector('.carousel-btn.right')
-    .addEventListener('click', () => move(1));
-}
-
-// Initialize ALL carousels on page
-document.querySelectorAll('.carousel-wrapper')
-  .forEach(initCarousel);
-</script>
-
-  <section class="section">
+<!-- ================= BLENDER CAROUSEL ================= -->
+<section class="section">
   <h2>3D Modeling with Blender</h2>
 
   <div class="carousel-wrapper">
@@ -191,99 +98,13 @@ document.querySelectorAll('.carousel-wrapper')
         <img src="images/GreyBoxing4.webp" class="project-image" alt="">
       </div>
 
-            <div class="project active">
+      <div class="project">
         <img src="images/GreyBoxing5.webp" class="project-image" alt="">
       </div>
 
       <div class="project">
         <img src="images/GreyBoxing6.webp" class="project-image" alt="">
       </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing7.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing8.webp" class="project-image" alt="">
-      </div>
-
-            <div class="project active">
-        <img src="images/GreyBoxing9.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing10.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing11.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing12.webp" class="project-image" alt="">
-      </div>
-
-            <div class="project active">
-        <img src="images/GreyBoxing13.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing14.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing15.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing16.webp" class="project-image" alt="">
-      </div>
-
-          <div class="project active">
-        <img src="images/GreyBoxing17.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing18.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing19.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing20.webp" class="project-image" alt="">
-      </div>
-
-            <div class="project active">
-        <img src="images/GreyBoxing21.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing22.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing23.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing24.webp" class="project-image" alt="">
-      </div>
-
-            <div class="project active">
-        <img src="images/GreyBoxing25.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing26.webp" class="project-image" alt="">
-      </div>
-
-      <div class="project">
-        <img src="images/GreyBoxing27.webp" class="project-image" alt="">
-      </div>
-
-      <!-- Add as many as you want -->
 
     </div>
 
@@ -292,7 +113,51 @@ document.querySelectorAll('.carousel-wrapper')
   </div>
 </section>
 
+<!-- ================= SCRIPT ================= -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
 
+  document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+    const carousel = wrapper.querySelector('.carousel');
+    const items = carousel.querySelectorAll('.project');
+    const leftBtn = wrapper.querySelector('.carousel-btn.left');
+    const rightBtn = wrapper.querySelector('.carousel-btn.right');
+
+    let currentIndex = 0;
+
+    items.forEach((item, i) => {
+      item.classList.toggle('active', i === 0);
+    });
+
+    function move(direction) {
+      const total = items.length;
+      currentIndex += direction;
+
+      if (currentIndex < 0) currentIndex = total - 1;
+      if (currentIndex >= total) currentIndex = 0;
+
+      items.forEach((item, i) => {
+        item.classList.toggle('active', i === currentIndex);
+      });
+
+      const active = items[currentIndex];
+      const offset =
+        active.offsetLeft -
+        carousel.offsetWidth / 2 +
+        active.offsetWidth / 2;
+
+      carousel.scrollTo({
+        left: offset,
+        behavior: 'smooth'
+      });
+    }
+
+    leftBtn.addEventListener('click', () => move(-1));
+    rightBtn.addEventListener('click', () => move(1));
+  });
+
+});
+</script>
 
 </body>
 </html>
