@@ -4,77 +4,138 @@
   <meta charset="UTF-8">
   <title>Joshua Garwood | Game Design Portfolio</title>
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- ================= NAV ================= -->
 <header class="nav">
   <h1>Joshua Garwood Game Design Portfolio</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+  </nav>
 </header>
 
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    My name is Joshua Garwood, and I am a Game Designer and Developer with six years of experience in game development.
+    I specialise in C#, Blender, pixel art, animation, and procedural generation.
+  </p>
+</section>
+
+<!-- ================= PROJECTS ================= -->
 <section id="projects" class="section">
   <h2>Projects</h2>
 
   <div class="carousel-wrapper">
 
-    <button class="carousel-btn left" onclick="move(-1)">◀</button>
+    <button class="carousel-btn left" onclick="moveCarousel(-1)">◀</button>
 
-    <div class="carousel-viewport">
-      <div class="carousel-track" id="track">
+    <div class="carousel" id="carousel">
 
-        <div class="project">PCG Dungeon Generator</div>
-        <div class="project">Nightmare</div>
-        <div class="project">Where Am I?</div>
-        <div class="project">Spell Quest</div>
-
+      <div class="project">
+        <img src="images/portfoliowebspageimage.webp" class="project-image">
+        <h3>PCG Dungeon Generator (2024)</h3>
+        <p class="project-subtitle">University Dissertation Artifact</p>
       </div>
+
+      <div class="project">
+        <img src="images/portfoliowebspageimage2.webp" class="project-image">
+        <h3>Nightmare (2024)</h3>
+        <p class="project-subtitle">Horror Game Project</p>
+      </div>
+
+      <div class="project">
+        <img src="images/portfoliowebspageimage3.webp" class="project-image">
+        <h3>Where Am I? (2023)</h3>
+        <p class="project-subtitle">Puzzle Exploration Game</p>
+      </div>
+
+      <div class="project">
+        <img src="images/portfoliowebspageimage4.webp" class="project-image">
+        <h3>Spell Quest (2019)</h3>
+        <p class="project-subtitle">Fantasy Adventure Game</p>
+      </div>
+
     </div>
 
-    <button class="carousel-btn right" onclick="move(1)">▶</button>
+    <button class="carousel-btn right" onclick="moveCarousel(1)">▶</button>
 
   </div>
 </section>
 
+<!-- ================= SCRIPT ================= -->
 <script>
-const track = document.getElementById("track");
-const projects = Array.from(track.children);
+document.addEventListener("DOMContentLoaded", () => {
 
-const itemWidth = 420; // card width + gap
-let index = 0;
+  const carousel = document.getElementById("carousel");
+  let projects = Array.from(carousel.children);
 
-// Duplicate items for illusion
-projects.forEach(p => {
-  track.appendChild(p.cloneNode(true));
-  track.insertBefore(p.cloneNode(true), track.firstChild);
-});
+  // Clone first and last for infinite loop
+  const firstClone = projects[0].cloneNode(true);
+  const lastClone = projects[projects.length - 1].cloneNode(true);
 
-function move(dir) {
-  index += dir;
-  update();
-}
+  carousel.appendChild(firstClone);
+  carousel.insertBefore(lastClone, projects[0]);
 
-function update() {
-  const offset = -index * itemWidth;
-  track.style.transform = `translateX(${offset}px)`;
+  projects = Array.from(carousel.children);
+
+  let currentIndex = 1;
 
   setActive();
-}
+  centerCurrent(false);
 
-function setActive() {
-  const all = track.children;
-  [...all].forEach(el => el.classList.remove("active"));
+  window.moveCarousel = function(direction) {
+    currentIndex += direction;
+    centerCurrent(true);
+    carousel.addEventListener("transitionend", handleLoop, { once: true });
+  };
 
-  const center =
-    Math.floor(all.length / 2) + index;
+  function centerCurrent(smooth = true) {
+    const active = projects[currentIndex];
+    const carouselWidth = carousel.offsetWidth;
 
-  all[center]?.classList.add("active");
-}
+    const scrollPosition =
+      active.offsetLeft +
+      active.offsetWidth / 2 -
+      carouselWidth / 2;
 
-// Init
-update();
+    carousel.scrollTo({
+      left: scrollPosition,
+      behavior: smooth ? "smooth" : "auto"
+    });
+
+    setActive();
+  }
+
+  function setActive() {
+    projects.forEach(p => p.classList.remove("active"));
+    projects[currentIndex].classList.add("active");
+  }
+
+  function handleLoop() {
+    if (currentIndex === 0) {
+      currentIndex = projects.length - 2;
+      centerCurrent(false);
+    }
+
+    if (currentIndex === projects.length - 1) {
+      currentIndex = 1;
+      centerCurrent(false);
+    }
+  }
+
+});
 </script>
+
 
 </body>
 </html>
