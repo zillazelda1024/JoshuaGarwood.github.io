@@ -192,3 +192,77 @@ body {
   border-radius: 4px;
 }
 
+/* Carousel layout */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.carousel {
+  display: flex;
+  gap: 3rem;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1100px;
+  justify-content: center;
+}
+
+/* Project cards */
+.carousel .project {
+  width: 360px;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: all 0.35s ease;
+  text-align: center;
+}
+
+/* Active (center) project */
+.carousel .project.active {
+  opacity: 1;
+  transform: scale(1.12);
+}
+
+/* Arrow buttons */
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 1rem;
+  color: #222;
+  transition: transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  transform: scale(1.2);
+}
+
+.carousel-btn.left {
+  position: absolute;
+  left: -60px;
+}
+
+.carousel-btn.right {
+  position: absolute;
+  right: -60px;
+}
+
+/* Mobile adjustment */
+@media (max-width: 900px) {
+  .carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel .project {
+    scroll-snap-align: center;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+}
