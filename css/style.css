@@ -116,3 +116,29 @@ body {
   text-align: center;
 }
 
+/* Horizontal scrolling projects */
+.projects-scroll {
+  display: flex;
+  gap: 3rem;
+  overflow-x: auto;
+  padding-bottom: 1.5rem;
+
+  scroll-snap-type: x mandatory;
+}
+
+.project {
+  min-width: 420px;
+  max-width: 420px;
+  scroll-snap-align: start;
+}
+
+/* Optional scrollbar styling */
+.projects-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
