@@ -96,6 +96,18 @@ Engine & Tools: Unity
   </div>
 </section>
 
+  <script>
+function scrollProjects(direction) {
+  const container = document.getElementById('projectsScroll');
+  const projectWidth = container.querySelector('.project').offsetWidth + 48;
+
+  container.scrollBy({
+    left: projectWidth * direction,
+    behavior: 'smooth'
+  });
+}
+</script>
+
 
 </body>
 </html>
