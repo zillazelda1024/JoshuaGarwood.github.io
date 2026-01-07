@@ -13,7 +13,6 @@
 
 <body>
 
-<!-- ================= NAV ================= -->
 <header class="nav">
   <h1>Joshua Garwood Game Design Portfolio</h1>
   <nav>
@@ -22,7 +21,6 @@
   </nav>
 </header>
 
-<!-- ================= ABOUT ================= -->
 <section id="about" class="section">
   <h2>About Me</h2>
   <p>
@@ -31,7 +29,6 @@
   </p>
 </section>
 
-<!-- ================= PROJECTS ================= -->
 <section id="projects" class="section">
   <h2>Projects</h2>
 
@@ -72,7 +69,6 @@
   </div>
 </section>
 
-<!-- ================= SCRIPT ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -96,8 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.moveCarousel = function(direction) {
     currentIndex += direction;
     centerCurrent(true);
-
-    // Wait for scroll animation to finish, then fix loop
     setTimeout(checkLoop, 400);
   };
 
@@ -124,13 +118,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function checkLoop() {
-    // If on clone of last (far left)
     if (currentIndex === 0) {
       currentIndex = projects.length - 2;
       centerCurrent(false);
     }
 
-    // If on clone of first (far right)
     if (currentIndex === projects.length - 1) {
       currentIndex = 1;
       centerCurrent(false);
@@ -139,8 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
-
-
 
 </body>
 </html>
