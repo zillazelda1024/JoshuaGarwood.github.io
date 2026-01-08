@@ -8,7 +8,7 @@
 /* ================= GLOBAL ================= */
 body {
   background: linear-gradient(180deg, #eef7f8 0%, #f6f1e8 60%);
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 h1, h2, h3 {
@@ -39,31 +39,28 @@ h1, h2, h3 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1rem;
+  text-align: center;
 }
 
 .section h2 {
-  text-align: center;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
-/* ================= CAROUSEL WRAPPER ================= */
+/* ================= CAROUSEL ================= */
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
-/* ================= CAROUSEL TRACK ================= */
 .carousel {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-
   transition: transform 0.5s ease;
 }
 
-/* ================= PROJECT CARDS ================= */
+/* ================= PROJECT CARD ================= */
 .project {
   width: 320px;
   flex-shrink: 0;
@@ -72,7 +69,6 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 
   opacity: 0.4;
   transform: scale(0.85);
@@ -88,7 +84,6 @@ h1, h2, h3 {
   width: 100%;
   height: 220px;
   object-fit: contain;
-  border-radius: 8px;
   margin-bottom: 1rem;
 }
 
