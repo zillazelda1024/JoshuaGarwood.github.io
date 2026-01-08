@@ -1,1 +1,126 @@
+/* ================= PROJECT PAGE LAYOUT ================= */
+
+.project-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+/* ================= TITLES ================= */
+
+.project-page h2 {
+  margin-bottom: 0.25rem;
+}
+
+.project-title {
+  margin-bottom: 2.5rem;
+  font-size: 1.6rem;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ================= HERO SECTION ================= */
+
+.project-hero {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+.project-video {
+  flex: 2;
+}
+
+.project-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 6px;
+}
+
+.project-info {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.project-info p {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* ================= SPLIT CONTENT SECTIONS ================= */
+
+.split-row {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.images-left {
+  flex-direction: row;
+}
+
+.images-right {
+  flex-direction: row-reverse;
+}
+
+/* ================= IMAGES ================= */
+
+.image-column {
+  flex: 1;
+}
+
+.image-pair {
+  display: flex;
+  gap: 1rem;
+}
+
+.image-pair img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* ================= TEXT ================= */
+
+.project-text {
+  flex: 1;
+  line-height: 1.7;
+}
+
+.project-text p {
+  margin-bottom: 1rem;
+}
+
+.project-text h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-text ul {
+  padding-left: 1.25rem;
+}
+
+.project-text li {
+  margin-bottom: 0.5rem;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .project-hero {
+    flex-direction: column;
+  }
+
+  .split-row {
+    flex-direction: column;
+  }
+
+  .image-pair {
+    flex-direction: column;
+  }
+}
 
