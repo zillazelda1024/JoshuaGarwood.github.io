@@ -7,11 +7,7 @@
 
 /* ================= GLOBAL ================= */
 body {
-  background: linear-gradient(
-    180deg,
-    #eef7f8 0%,
-    #f6f1e8 60%
-  );
+  background: linear-gradient(180deg, #eef7f8 0%, #f6f1e8 60%);
   font-family: Arial, sans-serif;
 }
 
@@ -51,98 +47,36 @@ h1, h2, h3 {
   margin-bottom: 2rem;
 }
 
-/* ================= CAROUSEL ================= */
+/* ================= CAROUSEL WRAPPER ================= */
 .carousel-wrapper {
-  display: flex;
-  justify-content: center;
   position: relative;
+  overflow: hidden;
+  width: 100%;
 }
 
+/* ================= CAROUSEL TRACK ================= */
 .carousel {
   display: flex;
-  gap: 3rem;
+  justify-content: flex-start;
+  align-items: center;
 
-  width: 100%;
-  max-width: 1100px;
-
-  overflow-x: auto;
-  padding: 2rem 1rem;
-
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-/* Hide scrollbar (Chrome, Edge, Safari) */
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar (Firefox) */
-.carousel {
-  scrollbar-width: none;
+  transition: transform 0.5s ease;
 }
 
 /* ================= PROJECT CARDS ================= */
 .project {
   width: 320px;
-  height: 420px;
   flex-shrink: 0;
-
-  scroll-snap-align: center;
+  margin: 0 1.5rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-
   text-align: center;
-  background: transparent;
-}
 
-.project-image {
-  width: 100%;
-  height: 240px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.project h3 {
-  margin-top: 0.5rem;
-}
-
-.project-subtitle {
-  margin-bottom: 0.75rem;
-}
-
-/* ================= BUTTONS ================= */
-/* Optional: hidden because scrolling replaces buttons */
-.carousel-btn {
-  display: none;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 900px) {
-  .carousel {
-    gap: 2rem;
-  }
-
-  .project {
-    width: 280px;
-  }
-}
-
-/* ================= FOCUSED CAROUSEL EFFECT ================= */
-
-.carousel {
-  scroll-snap-type: x mandatory;
-}
-
-.project {
   opacity: 0.4;
   transform: scale(0.85);
-  transition: transform 0.35s ease, opacity 0.35s ease;
-  scroll-snap-align: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .project.active {
@@ -150,8 +84,43 @@ h1, h2, h3 {
   transform: scale(1.1);
 }
 
-/* Optional: make focused item feel clickable */
-.project.active:hover {
-  cursor: pointer;
+.project-image {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
+/* ================= BUTTONS ================= */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10;
+  color: #222;
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .project {
+    width: 260px;
+    margin: 0 1rem;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+}
