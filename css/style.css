@@ -214,8 +214,13 @@ h1, h2, h3 {
 
 .image-pair img {
   width: 100%;
+  max-height: 220px;
+  object-fit: contain;
   border-radius: 6px;
+  background-color: #cfeaf1;
+  padding: 0.5rem;
 }
+
 
 /* ================= MOBILE (PROJECT PAGE) ================= */
 @media (max-width: 800px) {
