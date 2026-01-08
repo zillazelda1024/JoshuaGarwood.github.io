@@ -39,19 +39,30 @@ h1, h2, h3, h4 {
   font-weight: bold;
 }
 
-/* ================= SECTIONS ================= */
+/* ================= GENERIC SECTIONS ================= */
+/* IMPORTANT: keep this generic for carousel pages */
 .section {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1rem;
 }
 
-.section h2 {
+/* =================================================== */
+/* ================= PROJECT PAGE ONLY ================ */
+/* =================================================== */
+
+.project-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Titles */
+.project-page h2 {
   text-align: center;
   font-size: 1.8rem;
 }
 
-.project-title {
+.project-page .project-title {
   text-align: center;
   font-size: 1.4rem;
   margin-top: 0.25rem;
@@ -59,7 +70,7 @@ h1, h2, h3, h4 {
 }
 
 /* ================= HERO ================= */
-.project-hero {
+.project-page .project-hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2.5rem;
@@ -67,25 +78,25 @@ h1, h2, h3, h4 {
   margin-bottom: 4rem;
 }
 
-.project-video iframe {
+.project-page .project-video iframe {
   width: 100%;
   height: 320px;
   border-radius: 8px;
 }
 
-.project-info {
+.project-page .project-info {
   background: rgba(255, 255, 255, 0.45);
   padding: 1.5rem;
   border-radius: 8px;
   font-size: 0.95rem;
 }
 
-.project-info p {
+.project-page .project-info p {
   margin-bottom: 0.75rem;
 }
 
 /* ================= SPLIT SECTIONS ================= */
-.split-row {
+.project-page .split-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
@@ -94,27 +105,27 @@ h1, h2, h3, h4 {
 }
 
 /* Flip image/text order */
-.images-right {
+.project-page .images-right {
   direction: rtl;
 }
 
-.images-right > * {
+.project-page .images-right > * {
   direction: ltr;
 }
 
 /* ================= IMAGES ================= */
-.image-column {
+.project-page .image-column {
   display: flex;
   justify-content: center;
 }
 
-.image-pair {
+.project-page .image-pair {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 
-.image-pair img {
+.project-page .image-pair img {
   width: 100%;
   max-width: 420px;
   background: #cfeaf0;
@@ -123,32 +134,32 @@ h1, h2, h3, h4 {
 }
 
 /* ================= TEXT ================= */
-.project-text p,
-.project-text li {
+.project-page .project-text p,
+.project-page .project-text li {
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
-.project-text p {
+.project-page .project-text p {
   margin-bottom: 1rem;
 }
 
-.project-text h4 {
+.project-page .project-text h4 {
   margin: 1.5rem 0 0.75rem;
 }
 
-.project-text ul {
+.project-page .project-text ul {
   padding-left: 1.25rem;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 900px) {
-  .project-hero,
-  .split-row {
+  .project-page .project-hero,
+  .project-page .split-row {
     grid-template-columns: 1fr;
   }
 
-  .project-video iframe {
+  .project-page .project-video iframe {
     height: 240px;
   }
 }
