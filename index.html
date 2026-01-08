@@ -8,8 +8,8 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
-  <!-- ✅ EMBEDDED CSS (BUTTONS FIXED) -->
   <style>
+    /* ========== RESET ========== */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -17,88 +17,85 @@
     }
 
     body {
-      background: linear-gradient(180deg, #eef7f8 0%, #f6f1e8 60%);
       font-family: Inter, sans-serif;
+      background: linear-gradient(180deg, #eef7f8 0%, #f6f1e8 60%);
     }
 
     h1, h2, h3 {
       font-family: 'Playfair Display', serif;
     }
 
-    .nav {
-      background-color: #dff3f5;
+    /* ========== NAV ========== */
+    header {
+      background: #dff3f5;
       padding: 1.5rem;
       text-align: center;
     }
 
-    .nav a {
+    header a {
       margin: 0 1rem;
       text-decoration: none;
-      color: #222;
       font-weight: bold;
+      color: #222;
     }
 
-    .section {
+    /* ========== SECTIONS ========== */
+    section {
       max-width: 1200px;
       margin: 0 auto;
       padding: 3rem 1rem;
       text-align: center;
     }
 
-    /* ================= CAROUSEL ================= */
+    /* ========== CAROUSEL ========== */
     .carousel-wrapper {
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow: hidden;
+      margin-top: 2rem;
     }
 
     .carousel {
       display: flex;
-      gap: 3rem;
-      width: 100%;
-      max-width: 1100px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      padding: 2rem 1rem;
-    }
-
-    .carousel::-webkit-scrollbar {
-      display: none;
+      transition: transform 0.5s ease;
     }
 
     .project {
       width: 320px;
       flex-shrink: 0;
-      text-align: center;
+      margin: 0 1.5rem;
+
+      opacity: 0.4;
+      transform: scale(0.85);
+      transition: transform 0.4s ease, opacity 0.4s ease;
     }
 
-    .project-image {
+    .project.active {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    .project img {
       width: 100%;
-      height: 240px;
+      height: 220px;
       object-fit: contain;
       margin-bottom: 1rem;
     }
 
-    /* ================= BUTTONS (THIS WAS THE PROBLEM) ================= */
+    /* ========== BUTTONS ========== */
     .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       background: none;
       border: none;
       font-size: 2.5rem;
       cursor: pointer;
-      color: #222;
-      padding: 1rem;
-      position: absolute;
       z-index: 10;
+      color: #222;
     }
 
-    .carousel-btn.left {
-      left: -3rem;
-    }
-
-    .carousel-btn.right {
-      right: -3rem;
-    }
+    .carousel-btn.left { left: 0; }
+    .carousel-btn.right { right: 0; }
 
     @media (max-width: 900px) {
       .carousel-btn {
@@ -110,77 +107,30 @@
 
 <body>
 
-<header class="nav">
+<header>
   <h1>Joshua Garwood Game Design Portfolio</h1>
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#blender">3D Work</a>
+    <a href="#">About</a>
+    <a href="#">Projects</a>
+    <a href="#">3D Work</a>
   </nav>
 </header>
 
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>
-    Game Designer and Developer with experience in Unity, C#, Blender, procedural generation,
-    and world design.
-  </p>
-</section>
-
-<section id="projects" class="section">
+<section>
   <h2>Projects</h2>
 
   <div class="carousel-wrapper">
     <button class="carousel-btn left">◀</button>
 
     <div class="carousel">
-      <div class="project"><img src="images/portfoliowebspageimage.webp" class="project-image"><h3>PCG Dungeon Generator</h3></div>
-      <div class="project"><img src="images/portfoliowebspageimage2.webp" class="project-image"><h3>Nightmare</h3></div>
-      <div class="project"><img src="images/portfoliowebspageimage3.webp" class="project-image"><h3>Where Am I?</h3></div>
-      <div class="project"><img src="images/portfoliowebspageimage4.webp" class="project-image"><h3>Spell Quest</h3></div>
-      <div class="project"><img src="images/portfoliowebspageimage5.webp" class="project-image"><h3>Launch Em</h3></div>
-      <div class="project"><img src="images/portfoliowebspageimage6.webp" class="project-image"><h3>Snake Odyssey 64</h3></div>
-    </div>
-
-    <button class="carousel-btn right">▶</button>
-  </div>
-</section>
-
-<section id="blender" class="section">
-  <h2>3D Modeling with Blender</h2>
-
-  <div class="carousel-wrapper">
-    <button class="carousel-btn left">◀</button>
-
-    <div class="carousel">
-      <!-- ALL 27 IMAGES -->
-      <div class="project"><img src="images/GreyBoxing1.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing2.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing3.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing4.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing5.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing6.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing7.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing8.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing9.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing10.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing11.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing12.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing13.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing14.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing15.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing16.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing17.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing18.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing19.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing20.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing21.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing22.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing23.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing24.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing25.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing26.webp" class="project-image"></div>
-      <div class="project"><img src="images/GreyBoxing27.webp" class="project-image"></div>
+      <!-- ADD OR REMOVE PROJECTS FREELY -->
+      <div class="project"><img src="images/portfoliowebspageimage.webp"><h3>PCG Dungeon Generator</h3></div>
+      <div class="project"><img src="images/portfoliowebspageimage2.webp"><h3>Nightmare</h3></div>
+      <div class="project"><img src="images/portfoliowebspageimage3.webp"><h3>Where Am I?</h3></div>
+      <div class="project"><img src="images/portfoliowebspageimage4.webp"><h3>Spell Quest</h3></div>
+      <div class="project"><img src="images/portfoliowebspageimage5.webp"><h3>Launch Em</h3></div>
+      <div class="project"><img src="images/portfoliowebspageimage6.webp"><h3>Snake Odyssey 64</h3></div>
+      <!-- You can add up to 10+ here -->
     </div>
 
     <button class="carousel-btn right">▶</button>
@@ -188,48 +138,36 @@
 </section>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
-    const carousel = wrapper.querySelector('.carousel');
-    const items = Array.from(carousel.querySelectorAll('.project'));
-    const leftBtn = wrapper.querySelector('.carousel-btn.left');
-    const rightBtn = wrapper.querySelector('.carousel-btn.right');
+const carousel = document.querySelector('.carousel');
+const projects = Array.from(document.querySelectorAll('.project'));
+const leftBtn = document.querySelector('.carousel-btn.left');
+const rightBtn = document.querySelector('.carousel-btn.right');
 
-    let index = 0;
+let index = 0;
+const itemWidth = 320 + 48; // card width + margin
 
-    function updateCarousel() {
-      items.forEach((item, i) => {
-        item.classList.toggle('active', i === index);
-      });
+function updateCarousel() {
+  projects.forEach((p, i) =>
+    p.classList.toggle('active', i === index)
+  );
 
-      const activeItem = items[index];
-      const offset =
-        activeItem.offsetLeft -
-        carousel.offsetWidth / 2 +
-        activeItem.offsetWidth / 2;
+  const offset = -(index * itemWidth) + (window.innerWidth / 2 - itemWidth / 2);
+  carousel.style.transform = `translateX(${offset}px)`;
+}
 
-      carousel.scrollTo({
-        left: offset,
-        behavior: 'smooth'
-      });
-    }
+/* LOOPING */
+leftBtn.onclick = () => {
+  index = (index - 1 + projects.length) % projects.length;
+  updateCarousel();
+};
 
-    leftBtn.addEventListener('click', () => {
-      index = Math.max(index - 1, 0);
-      updateCarousel();
-    });
+rightBtn.onclick = () => {
+  index = (index + 1) % projects.length;
+  updateCarousel();
+};
 
-    rightBtn.addEventListener('click', () => {
-      index = Math.min(index + 1, items.length - 1);
-      updateCarousel();
-    });
-
-    updateCarousel(); // center first item on load
-  });
-});
+updateCarousel();
 </script>
-
-
 
 </body>
 </html>
