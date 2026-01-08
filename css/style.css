@@ -131,3 +131,27 @@ h1, h2, h3 {
     width: 280px;
   }
 }
+
+/* ================= FOCUSED CAROUSEL EFFECT ================= */
+
+.carousel {
+  scroll-snap-type: x mandatory;
+}
+
+.project {
+  opacity: 0.4;
+  transform: scale(0.85);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  scroll-snap-align: center;
+}
+
+.project.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Optional: make focused item feel clickable */
+.project.active:hover {
+  cursor: pointer;
+}
+
