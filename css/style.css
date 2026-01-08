@@ -227,3 +227,19 @@ h1, h2, h3 {
     grid-template-columns: 1fr;
   }
 }
+
+/* TEXT + IMAGE SIDE-BY-SIDE LAYOUT */
+.text-image-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  max-width: 860px;
+  margin: 0 auto 3rem;
+  align-items: start;
+}
+
+/* Remove max-width conflict inside the grid */
+.text-image-row .project-text {
+  max-width: 100%;
+  margin: 0;
+}
