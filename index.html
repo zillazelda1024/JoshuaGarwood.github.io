@@ -188,15 +188,47 @@
 </section>
 
 <script>
-document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
-  const carousel = wrapper.querySelector('.carousel');
-  const left = wrapper.querySelector('.carousel-btn.left');
-  const right = wrapper.querySelector('.carousel-btn.right');
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+    const carousel = wrapper.querySelector('.carousel');
+    const items = Array.from(carousel.querySelectorAll('.project'));
+    const leftBtn = wrapper.querySelector('.carousel-btn.left');
+    const rightBtn = wrapper.querySelector('.carousel-btn.right');
 
-  left.onclick = () => carousel.scrollBy({ left: -350, behavior: 'smooth' });
-  right.onclick = () => carousel.scrollBy({ left: 350, behavior: 'smooth' });
+    let index = 0;
+
+    function updateCarousel() {
+      items.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+      });
+
+      const activeItem = items[index];
+      const offset =
+        activeItem.offsetLeft -
+        carousel.offsetWidth / 2 +
+        activeItem.offsetWidth / 2;
+
+      carousel.scrollTo({
+        left: offset,
+        behavior: 'smooth'
+      });
+    }
+
+    leftBtn.addEventListener('click', () => {
+      index = Math.max(index - 1, 0);
+      updateCarousel();
+    });
+
+    rightBtn.addEventListener('click', () => {
+      index = Math.min(index + 1, items.length - 1);
+      updateCarousel();
+    });
+
+    updateCarousel(); // center first item on load
+  });
 });
 </script>
+
 
 </body>
 </html>
