@@ -133,3 +133,28 @@ h1, h2, h3 {
   color: inherit;
 }
 
+/* ================= ABOUT ME ================= */
+.about {
+  max-width: 900px;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 auto;
+}
+
+/* ================= TIGHTER CAROUSEL STACKING ================= */
+.section + .section {
+  padding-top: 2rem;
+}
+
+.section:first-of-type {
+  padding-bottom: 2rem;
+}
+
+.carousel-wrapper {
+  padding-bottom: 1rem;
+}
+
