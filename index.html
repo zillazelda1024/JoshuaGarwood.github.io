@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Joshua Garwood | Game Design Portfolio</title>
 
-  <!-- Mobile responsiveness -->
+  <!-- Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Fonts -->
@@ -22,6 +22,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
+    <a href="#blender">3D Work</a>
   </nav>
 </header>
 
@@ -29,9 +30,9 @@
 <section id="about" class="section">
   <h2>About Me</h2>
   <p>
-    My name is Joshua Garwood, and I am a Game Designer and Developer with six years of experience in the game development industry, honed through both college and university education. I possess a strong passion for creating and designing engaging games and have successfully contributed to various projects throughout my academic journey, alongside numerous personal projects.
+    My name is Joshua Garwood, and I am a Game Designer and Developer with six years of experience in the game development industry, honed through both college and university education.
     <br><br>
-    I am skilled in multiple facets of game development, including coding and scripting in C#, 3D modeling and animation using Blender, 2D and 3D animation, as well as pixel art creation. Additionally, I have experience in story and world design, as well as world generation utilizing procedural generation techniques.
+    I am skilled in C#, Unity, 3D modeling and animation in Blender, 2D/3D animation, pixel art, procedural generation, and world design.
   </p>
 </section>
 
@@ -40,16 +41,16 @@
   <h2>Projects</h2>
 
   <div class="carousel-wrapper">
-    <button class="carousel-btn left" aria-label="Previous project">◀</button>
+    <button class="carousel-btn left">◀</button>
 
     <div class="carousel">
       <div class="project active">
         <a href="projects/pcg-dungeon-generator.html">
-          <img src="images/portfoliowebspageimage.webp" class="project-image" alt="PCG Dungeon Generator">
+          <img src="images/portfoliowebspageimage.webp" class="project-image" alt="">
         </a>
         <h3>PCG Dungeon Generator (2024)</h3>
         <p class="project-subtitle">University Dissertation Artifact</p>
-        <a href="projects/pcg-dungeon-generator.html" class="project-link">View Project →</a>
+        <a href="projects/pcg-dungeon-generator.html">View Project →</a>
       </div>
 
       <div class="project">
@@ -83,7 +84,55 @@
       </div>
     </div>
 
-    <button class="carousel-btn right" aria-label="Next project">▶</button>
+    <button class="carousel-btn right">▶</button>
+  </div>
+</section>
+
+<!-- ================= BLENDER / GREYBOXING ================= -->
+<section id="blender" class="section">
+  <h2>3D Modeling with Blender</h2>
+
+  <p>
+    I created the 3D assets for the Haunted House group project using Blender.
+    These models were informed by mood boards and references from games and films,
+    ensuring strong thematic cohesion.
+  </p>
+
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left">◀</button>
+
+    <div class="carousel">
+      <!-- Greyboxing images -->
+      <div class="project active"><img src="images/GreyBoxing1.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing2.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing3.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing4.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing5.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing6.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing7.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing8.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing9.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing10.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing11.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing12.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing13.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing14.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing15.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing16.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing17.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing18.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing19.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing20.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing21.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing22.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing23.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing24.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing25.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing26.webp" class="project-image"></div>
+      <div class="project"><img src="images/GreyBoxing27.webp" class="project-image"></div>
+    </div>
+
+    <button class="carousel-btn right">▶</button>
   </div>
 </section>
 
@@ -93,15 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
     const carousel = wrapper.querySelector('.carousel');
     const items = carousel.querySelectorAll('.project');
-    const leftBtn = wrapper.querySelector('.carousel-btn.left');
-    const rightBtn = wrapper.querySelector('.carousel-btn.right');
-
+    const left = wrapper.querySelector('.carousel-btn.left');
+    const right = wrapper.querySelector('.carousel-btn.right');
     let index = 0;
 
-    function updateActive() {
-      items.forEach((item, i) => {
-        item.classList.toggle('active', i === index);
-      });
+    function update() {
+      items.forEach((item, i) =>
+        item.classList.toggle('active', i === index)
+      );
 
       const active = items[index];
       carousel.scrollTo({
@@ -110,18 +158,17 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    leftBtn.addEventListener('click', () => {
+    left.addEventListener('click', () => {
       index = (index - 1 + items.length) % items.length;
-      updateActive();
+      update();
     });
 
-    rightBtn.addEventListener('click', () => {
+    right.addEventListener('click', () => {
       index = (index + 1) % items.length;
-      updateActive();
+      update();
     });
 
-    // ✅ Center first project on load
-    updateActive();
+    update(); // center first item
   });
 });
 </script>
