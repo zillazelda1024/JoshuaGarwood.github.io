@@ -50,14 +50,17 @@ h1, h2, h3 {
 /* ================= CAROUSEL ================= */
 .carousel-wrapper {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: visible;
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 .carousel {
   display: flex;
   align-items: center;
   transition: transform 0.5s ease;
+  padding: 2rem 0;
 }
 
 /* ================= PROJECT CARD ================= */
@@ -78,6 +81,11 @@ h1, h2, h3 {
 .project.active {
   opacity: 1;
   transform: scale(1.1);
+}
+
+.project h3 {
+  margin-top: 0.5rem;
+  text-align: center;
 }
 
 .project-image {
