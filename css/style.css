@@ -151,11 +151,10 @@ h1, h2, h3 {
 
 /* ================= PROJECT PAGE ================= */
 
-/* Force narrower layout than .section */
+/* Narrower layout */
 .section.project-page {
   max-width: 860px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 3rem 1rem;
 }
 
 /* TITLE */
@@ -200,7 +199,22 @@ h1, h2, h3 {
   margin-bottom: 0.75rem;
 }
 
-/* IMAGE PAIRS */
+/* ================= TEXT + IMAGE ROW ================= */
+.text-image-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  max-width: 860px;
+  margin: 0 auto 3rem;
+  align-items: start;
+}
+
+.text-image-row .project-text {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* ================= IMAGE PAIRS ================= */
 .image-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -221,31 +235,17 @@ h1, h2, h3 {
   padding: 0.5rem;
 }
 
-
 /* ================= MOBILE (PROJECT PAGE) ================= */
 @media (max-width: 800px) {
+  .project-hero {
+    grid-template-columns: 1fr;
+  }
+
   .text-image-row {
     grid-template-columns: 1fr;
   }
-}
 
   .image-pair {
     grid-template-columns: 1fr;
   }
-}
-
-/* TEXT + IMAGE SIDE-BY-SIDE LAYOUT */
-.text-image-row {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 2rem;
-  max-width: 860px;
-  margin: 0 auto 3rem;
-  align-items: start;
-}
-
-/* Remove max-width conflict inside the grid */
-.text-image-row .project-text {
-  max-width: 100%;
-  margin: 0;
 }
