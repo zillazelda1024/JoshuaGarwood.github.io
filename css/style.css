@@ -219,9 +219,10 @@ h1, h2, h3 {
 
 /* ================= MOBILE (PROJECT PAGE) ================= */
 @media (max-width: 800px) {
-  .project-hero {
+  .text-image-row {
     grid-template-columns: 1fr;
   }
+}
 
   .image-pair {
     grid-template-columns: 1fr;
