@@ -304,3 +304,10 @@ h1, h2, h3 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== FORCE PROJECT PAGE WIDTH ===== */
+.section.project-page {
+  max-width: 860px;
+  padding-left: 0;
+  padding-right: 0;
+}
