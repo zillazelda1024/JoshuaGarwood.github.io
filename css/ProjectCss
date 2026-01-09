@@ -1,88 +1,47 @@
-/* ================= PAGE CENTERING ================= */
+/* ================= RESET / SAFETY ================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #efe9df;
+}
+
+/* ================= NAV ================= */
+
+.nav {
+  width: 100%;
+  background: #dff5f8;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: #000;
+}
+
+/* ================= PAGE WRAPPER ================= */
+
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= PROJECT PAGE ================= */
 
 .project-page {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-}
-
-/* ================= TITLES ================= */
-
-.project-page h2,
-.project-title {
-  text-align: center;
-}
-
-.project-page h2 {
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 0.25rem;
-}
-
-.project-title {
-  font-size: 2rem;
-  margin-bottom: 3rem;
-}
-
-/* ================= VIDEO ================= */
-
-.video-wrap {
-  max-width: 800px;
-  margin: 0 auto 3rem;
-}
-
-.video-wrap iframe {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border: none;
-}
-
-/* ================= DETAILS ================= */
-
-.details {
-  max-width: 500px;
-  margin: 0 auto 4rem;
-}
-
-.details ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.details li {
-  margin-bottom: 0.5rem;
-}
-
-/* ================= CONTENT ROWS ================= */
-
-.content-row {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  margin-bottom: 4rem;
-}
-
-.content-row img {
-  width: 280px;
-  background: #e6f3f9;
-  padding: 1rem;
-}
-
-.content-row .text {
-  flex: 1;
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 800px) {
-  .content-row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .content-row img {
-    width: 100%;
-  }
-}
+  max-width: 10
