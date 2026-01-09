@@ -10,33 +10,35 @@
 
 <body>
 
-<header class="site-header">
-  <h1>Joshua Garwood Game Design Portfolio</h1>
-  <nav>
-    <a href="../index.html">Home</a>
-    <a href="../index.html#projects">Projects</a>
-  </nav>
+<header class="portfolio-header">
+  <div class="header-inner">
+    <h1>Joshua Garwood Game Design Portfolio</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../index.html#projects">Projects</a>
+    </nav>
+  </div>
 </header>
 
-<main class="page">
+<main class="page-wrapper">
 
-  <section class="project">
+  <article class="project-card">
 
-    <header class="project-header">
+    <header class="project-title-block">
       <h2>University Dissertation Artifact</h2>
       <h3>PCG Dungeon Generator</h3>
     </header>
 
     <!-- VIDEO -->
-    <div class="video-block">
+    <section class="video-section">
       <iframe
         src="https://www.youtube.com/embed/H3dkdJ0iHV0"
         allowfullscreen>
       </iframe>
-    </div>
+    </section>
 
-    <!-- PROJECT DETAILS -->
-    <div class="details">
+    <!-- DETAILS -->
+    <section class="details-section">
       <h4>Project Details</h4>
       <ul>
         <li><strong>Platform:</strong> PC</li>
@@ -45,53 +47,51 @@
         <li><strong>Role:</strong> Solo Developer</li>
         <li><strong>Tools:</strong> C#, Unity</li>
       </ul>
-    </div>
+    </section>
 
-    <!-- SECTION 1 -->
-    <div class="section-row">
+    <!-- CONTENT -->
+    <section class="content-row">
       <img src="../images/pcg1.webp" alt="Procedural dungeon example">
       <div>
         <h4>Project Overview</h4>
         <p>
-          For my university dissertation, I developed a PC-based procedural content
-          generation (PCG) artifact focused on dungeon generation techniques commonly
-          used in game development.
+          For my university dissertation, I developed a PC-based procedural
+          content generation (PCG) artifact focused on dungeon generation
+          techniques commonly used in game development.
         </p>
         <p>
-          The project critically analyses multiple PCG algorithms, examining how
-          each affects spatial layout, dungeon readability, and player navigation.
+          The project critically analyses multiple PCG algorithms, examining
+          how each impacts spatial layout, dungeon readability, and player navigation.
         </p>
       </div>
-    </div>
+    </section>
 
-    <!-- SECTION 2 -->
-    <div class="section-row">
-      <img src="../images/pcg2.webp" alt="Binary space partition dungeon">
+    <section class="content-row">
+      <img src="../images/pcg2.webp" alt="Dungeon generation methods">
       <div>
         <h4>Gameplay Mechanics</h4>
         <p>
-          The system supports Cellular Automata, Binary Space Partitioning,
+          The system includes Cellular Automata, Binary Space Partitioning,
           Perlin Noise, Recursive Division, Drunkard Walk, and Recursive Backtracking.
         </p>
       </div>
-    </div>
+    </section>
 
-    <!-- SECTION 3 -->
-    <div class="section-row">
-      <img src="../images/pcg3.webp" alt="Recursive division dungeon">
+    <section class="content-row">
+      <img src="../images/pcg3.webp" alt="Procedural dungeon output">
       <div>
         <h4>Key Responsibilities & Contributions</h4>
         <ul>
-          <li>Implemented multiple procedural generation algorithms</li>
-          <li>Conducted academic research</li>
+          <li>Designed and implemented procedural generation algorithms</li>
+          <li>Conducted academic research into level design techniques</li>
           <li>Built visual debugging tools</li>
           <li>Created modular comparison systems</li>
           <li>Refined dungeon navigation clarity</li>
         </ul>
       </div>
-    </div>
+    </section>
 
-  </section>
+  </article>
 
 </main>
 
