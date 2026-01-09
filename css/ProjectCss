@@ -1,9 +1,10 @@
-/* ================= PROJECT PAGE LAYOUT ================= */
+/* ================= PROJECT PAGE ================= */
 
 .project-page {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding-bottom: 4rem;
+  text-align: center;
 }
 
 /* ================= TITLES ================= */
@@ -13,120 +14,71 @@
 }
 
 .project-title {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   font-size: 1.6rem;
-  font-family: 'Playfair Display', serif;
 }
 
-/* ================= HERO SECTION ================= */
+/* ================= HERO ================= */
 
-.project-hero {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  margin-bottom: 4rem;
-}
-
-.project-video {
-  flex: 2;
-}
-
-.project-video iframe {
-  width: 100%;
+.hero-center iframe {
+  width: 420px;
   aspect-ratio: 16 / 9;
-  border: none;
   border-radius: 6px;
+  border: none;
 }
 
-.project-info {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.65);
-  padding: 1.5rem;
-  border-radius: 8px;
-}
-
-.project-info p {
-  margin-bottom: 0.75rem;
+.hero-info {
+  margin-top: 1rem;
   font-size: 0.95rem;
 }
 
-/* ================= SPLIT CONTENT SECTIONS ================= */
+/* ================= IMAGE GRIDS ================= */
 
-.split-row {
-  display: flex;
-  gap: 3rem;
-  margin-bottom: 4rem;
-  align-items: flex-start;
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
 }
 
-.images-left {
-  flex-direction: row;
-}
-
-.images-right {
-  flex-direction: row-reverse;
-}
-
-/* ================= IMAGES ================= */
-
-.image-column {
-  flex: 0.9;
-}
-
-.image-pair {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.image-pair img {
+.image-grid img {
   width: 100%;
-  height: 300px;
+  height: 260px;
   object-fit: contain;
-  background: #e6f4f8;
-  padding: 0.5rem;
+  background: #a7dbef;
+  padding: 1rem;
   border-radius: 6px;
 }
 
-/* ================= TEXT ================= */
+/* ================= TEXT BLOCKS ================= */
 
-.project-text {
-  flex: 1.1;
+.text-block {
+  text-align: left;
+  max-width: 850px;
+  margin: 0 auto 4rem;
   line-height: 1.7;
-  background: rgba(255, 255, 255, 0.55);
-  padding: 1.5rem;
-  border-radius: 8px;
 }
 
-.project-text p {
-  margin-bottom: 1rem;
+.text-block h4 {
+  margin-top: 2rem;
 }
 
-.project-text h4 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-text ul {
+.text-block ul {
   padding-left: 1.25rem;
 }
 
-.project-text li {
+.text-block li {
   margin-bottom: 0.5rem;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 
 @media (max-width: 900px) {
-  .project-hero {
-    flex-direction: column;
+  .hero-center iframe {
+    width: 100%;
   }
 
-  .split-row {
-    flex-direction: column;
-  }
-
-  .image-pair img {
-    height: auto;
+  .image-grid {
+    grid-template-columns: 1fr;
   }
 }
