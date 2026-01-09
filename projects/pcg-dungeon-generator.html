@@ -10,7 +10,7 @@
 
 <body>
 
-<header class="nav">
+<header class="site-header">
   <h1>Joshua Garwood Game Design Portfolio</h1>
   <nav>
     <a href="../index.html">Home</a>
@@ -18,19 +18,25 @@
   </nav>
 </header>
 
-<section class="project-page">
+<main class="page">
 
-  <h2>University Dissertation Artifact</h2>
-  <h3 class="project-title">PCG Dungeon Generator</h3>
+  <section class="project">
 
-  <!-- HERO VIDEO -->
-  <div class="hero">
-    <iframe
-      src="https://www.youtube.com/embed/H3dkdJ0iHV0"
-      allowfullscreen>
-    </iframe>
+    <header class="project-header">
+      <h2>University Dissertation Artifact</h2>
+      <h3>PCG Dungeon Generator</h3>
+    </header>
 
-    <div class="hero-info">
+    <!-- VIDEO -->
+    <div class="video-block">
+      <iframe
+        src="https://www.youtube.com/embed/H3dkdJ0iHV0"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- PROJECT DETAILS -->
+    <div class="details">
       <h4>Project Details</h4>
       <ul>
         <li><strong>Platform:</strong> PC</li>
@@ -40,68 +46,54 @@
         <li><strong>Tools:</strong> C#, Unity</li>
       </ul>
     </div>
-  </div>
 
-  <!-- CONTENT ROW 1 -->
-  <div class="content-row">
-    <div class="content-image">
+    <!-- SECTION 1 -->
+    <div class="section-row">
       <img src="../images/pcg1.webp" alt="Procedural dungeon example">
+      <div>
+        <h4>Project Overview</h4>
+        <p>
+          For my university dissertation, I developed a PC-based procedural content
+          generation (PCG) artifact focused on dungeon generation techniques commonly
+          used in game development.
+        </p>
+        <p>
+          The project critically analyses multiple PCG algorithms, examining how
+          each affects spatial layout, dungeon readability, and player navigation.
+        </p>
+      </div>
     </div>
 
-    <div class="content-text">
-      <h4>Project Overview</h4>
-      <p>
-        For my university dissertation, I developed a PC-based procedural content
-        generation (PCG) artifact focused on dungeon generation techniques commonly
-        used within game development.
-      </p>
-      <p>
-        The project explores and critically analyses a range of PCG algorithms,
-        examining how each method impacts spatial layout, dungeon readability,
-        and player navigation.
-      </p>
-    </div>
-  </div>
-
-  <!-- CONTENT ROW 2 -->
-  <div class="content-row">
-    <div class="content-image">
+    <!-- SECTION 2 -->
+    <div class="section-row">
       <img src="../images/pcg2.webp" alt="Binary space partition dungeon">
+      <div>
+        <h4>Gameplay Mechanics</h4>
+        <p>
+          The system supports Cellular Automata, Binary Space Partitioning,
+          Perlin Noise, Recursive Division, Drunkard Walk, and Recursive Backtracking.
+        </p>
+      </div>
     </div>
 
-    <div class="content-text">
-      <h4>Gameplay Mechanics</h4>
-      <p>
-        The artifact functions as both a playable prototype and a research tool,
-        allowing dungeon layouts to be generated and compared in real time.
-      </p>
-      <p>
-        Six techniques are implemented: Cellular Automata, Binary Space
-        Partitioning (BSP), Perlin Noise, Recursive Division, Drunkard Walk,
-        and Recursive Backtracking.
-      </p>
-    </div>
-  </div>
-
-  <!-- CONTENT ROW 3 -->
-  <div class="content-row">
-    <div class="content-image">
+    <!-- SECTION 3 -->
+    <div class="section-row">
       <img src="../images/pcg3.webp" alt="Recursive division dungeon">
+      <div>
+        <h4>Key Responsibilities & Contributions</h4>
+        <ul>
+          <li>Implemented multiple procedural generation algorithms</li>
+          <li>Conducted academic research</li>
+          <li>Built visual debugging tools</li>
+          <li>Created modular comparison systems</li>
+          <li>Refined dungeon navigation clarity</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="content-text">
-      <h4>Key Responsibilities & Contributions</h4>
-      <ul>
-        <li>Designed and implemented multiple procedural generation algorithms</li>
-        <li>Conducted academic research into procedural level design</li>
-        <li>Developed visual debugging tools</li>
-        <li>Built a modular system for algorithm comparison</li>
-        <li>Refined layouts for improved navigation clarity</li>
-      </ul>
-    </div>
-  </div>
+  </section>
 
-</section>
+</main>
 
 </body>
 </html>
