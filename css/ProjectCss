@@ -1,109 +1,121 @@
-/* ================= RESET ================= */
+/* ================= HARD RESET ================= */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  opacity: 1 !important;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #f7f9fb;
-  color: #222;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #eef2f5;
+  color: #1f1f1f;
 }
 
 /* ================= HEADER ================= */
 
-.site-header {
-  background: #e6f3f9;
-  padding: 1.5rem 1rem;
+.portfolio-header {
+  background: #dff1f8;
+  border-bottom: 1px solid #c9dce4;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
   text-align: center;
 }
 
-.site-header h1 {
+.header-inner h1 {
   margin: 0 0 0.5rem;
   font-size: 1.4rem;
 }
 
-.site-header nav a {
+.header-inner nav a {
   margin: 0 0.75rem;
   text-decoration: none;
   font-weight: 500;
-  color: #222;
+  color: #1f1f1f;
 }
 
-/* ================= PAGE WRAPPER ================= */
+/* ================= PAGE CENTERING ================= */
 
-.page {
+.page-wrapper {
   display: flex;
   justify-content: center;
+  padding: 4rem 1rem;
 }
 
-/* ================= PROJECT ================= */
+/* ================= PROJECT CARD ================= */
 
-.project {
+.project-card {
   width: 100%;
   max-width: 1000px;
-  padding: 4rem 1.5rem 6rem;
   background: #ffffff;
+  padding: 4rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 /* ================= TITLES ================= */
 
-.project-header {
+.project-title-block {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.project-header h2 {
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
+.project-title-block h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   opacity: 0.6;
   margin-bottom: 0.3rem;
 }
 
-.project-header h3 {
-  font-size: 2rem;
+.project-title-block h3 {
+  font-size: 2.1rem;
   margin: 0;
 }
 
 /* ================= VIDEO ================= */
 
-.video-block {
-  max-width: 800px;
+.video-section {
+  max-width: 850px;
   margin: 0 auto 3rem;
 }
 
-.video-block iframe {
+.video-section iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
-  border: none;
   border-radius: 10px;
+  border: none;
 }
 
 /* ================= DETAILS ================= */
 
-.details {
+.details-section {
   max-width: 500px;
   margin: 0 auto 4rem;
-  background: #f4f6f8;
-  padding: 1.5rem;
+  background: #f4f7f9;
+  padding: 1.75rem;
   border-radius: 10px;
 }
 
-.details ul {
+.details-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.details li {
+.details-section li {
   margin-bottom: 0.5rem;
 }
 
 /* ================= CONTENT ROWS ================= */
 
-.section-row {
+.content-row {
   display: grid;
   grid-template-columns: 320px 1fr;
   gap: 3rem;
@@ -111,25 +123,25 @@ body {
   margin-bottom: 4rem;
 }
 
-.section-row img {
+.content-row img {
   width: 100%;
   background: #e6f3f9;
   padding: 1rem;
   border-radius: 10px;
 }
 
-.section-row h4 {
+.content-row h4 {
   margin-top: 0;
 }
 
 /* ================= MOBILE ================= */
 
-@media (max-width: 850px) {
-  .section-row {
-    grid-template-columns: 1fr;
+@media (max-width: 900px) {
+  .project-card {
+    padding: 2.5rem 1.5rem;
   }
 
-  .project {
-    padding: 2.5rem 1.25rem;
+  .content-row {
+    grid-template-columns: 1fr;
   }
 }
