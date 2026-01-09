@@ -43,5 +43,6 @@ body {
 /* ================= PROJECT PAGE ================= */
 
 .project-page {
-  width: 100%;
-  max-width: 10
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
