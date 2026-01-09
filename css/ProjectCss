@@ -20,24 +20,22 @@
 .project-title {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 /* ================= HERO ================= */
 
 .hero {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
-  align-items: start;
-  margin-bottom: 4rem;
+  max-width: 850px;
+  margin: 0 auto 5rem;
 }
 
-.hero-media iframe {
+.hero iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 10px;
   border: none;
+  margin-bottom: 2rem;
 }
 
 .hero-info {
@@ -45,10 +43,6 @@
   padding: 1.75rem;
   border-radius: 10px;
   font-size: 0.95rem;
-}
-
-.hero-info h4 {
-  margin-bottom: 1rem;
 }
 
 .hero-info ul {
@@ -61,16 +55,17 @@
   margin-bottom: 0.6rem;
 }
 
-/* ================= IMAGE GRIDS ================= */
+/* ================= CONTENT ROWS ================= */
 
-.image-grid {
+.content-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin: 4rem 0;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 5rem;
 }
 
-.image-grid img {
+.content-image img {
   width: 100%;
   height: 260px;
   object-fit: contain;
@@ -79,35 +74,30 @@
   border-radius: 10px;
 }
 
-/* ================= TEXT BLOCKS ================= */
-
-.text-block {
-  max-width: 850px;
-  margin: 0 auto 4rem;
+.content-text {
   line-height: 1.75;
 }
 
-.text-block h4 {
-  margin-top: 2.5rem;
+.content-text h4 {
   margin-bottom: 0.75rem;
 }
 
-.text-block ul {
+.content-text ul {
   padding-left: 1.25rem;
 }
 
-.text-block li {
+.content-text li {
   margin-bottom: 0.6rem;
 }
 
 /* ================= MOBILE ================= */
 
 @media (max-width: 900px) {
-  .hero {
+  .content-row {
     grid-template-columns: 1fr;
   }
 
-  .image-grid {
-    grid-template-columns: 1fr;
+  .content-image img {
+    height: auto;
   }
 }
