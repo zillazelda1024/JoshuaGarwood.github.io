@@ -28,25 +28,17 @@ body {
   align-items: center;
 }
 
-.nav nav a {
-  margin-left: 1.5rem;
-  text-decoration: none;
-  color: #000;
-  font-weight: 500;
-}
-
 /* ================= PAGE WRAPPER ================= */
 
 .page-wrapper {
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
 
 /* ================= PROJECT PAGE ================= */
 
 .project-page {
   max-width: 1100px;
-  width: 100%;
+  margin: 0 auto;              /* ⭐ THIS is what centers it */
   padding: 4rem 1.5rem 6rem;
 }
 
@@ -91,7 +83,6 @@ body {
 
 .details h4 {
   margin-top: 0;
-  margin-bottom: 1rem;
 }
 
 .details ul {
@@ -116,27 +107,18 @@ body {
 
 .content-row img {
   width: 100%;
-  height: 300px;
+  height: 320px;
   object-fit: contain;
   background: #e6f3f9;
   padding: 1.5rem;
   border-radius: 12px;
 }
 
-.content-row .text h4 {
+.content-row h4 {
   margin-top: 0;
-  margin-bottom: 0.75rem;
 }
 
-.content-row ul {
-  padding-left: 1.25rem;
-}
-
-.content-row li {
-  margin-bottom: 0.5rem;
-}
-
-/* ================= ALTERNATING LAYOUT ================= */
+/* ================= ALTERNATING ================= */
 
 .content-row.reverse {
   direction: rtl;
