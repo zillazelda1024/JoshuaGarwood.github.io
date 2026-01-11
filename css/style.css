@@ -1,4 +1,6 @@
 /* ================= RESET ================= */
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,7 +9,16 @@
 
 /* ================= GLOBAL ================= */
 body {
-  background: linear-gradient(180deg, #eef7f8 0%, #f6f1e8 60%);
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+}
+
+
   font-family: 'Inter', sans-serif;
 }
 
@@ -168,3 +179,18 @@ h1, h2, h3 {
   padding-bottom: 1rem;
 }
 
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+}

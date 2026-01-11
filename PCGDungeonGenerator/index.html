@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCG Dungeon Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dungeon.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header class="nav">
+        <a href="../index.html">← Back to Portfolio</a>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <h1>University Dissertation Artifact</h1>
+        <h2>PCG Dungeon Generator</h2>
+    </section>
+    <section class="video-text-section">
+        <div class="text-content">
+            <h1>University Dissertation Artifact<br>PCG Dungeon Generator</h1>
+            <p>
+                Platform: PC
+            </p>
+            <p>
+                Team Size: 1
+            </p>
+            <p>
+                Project Duration: 5 months
+            </p>
+            <p>
+                Engine & Tools: Unity, Photoshop, YouTube
+            </p>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                    title="Dissertation Artifact Video" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+
+    <!-- SECTION 1 -->
+    <section class="content-section">
+        <div class="content-grid">
+            <div class="media">
+                <!-- Replace with iframe later if needed -->
+                <img src="../images/portfoliowebspageimage.webp" alt="Dungeon Generator Preview">
+            </div>
+
+            <div class="text">
+                <h3>Project Overview</h3>
+                <p>
+                    For my university dissertation, I developed a PC based artificial focused on procedural content generation (PCG) methods for dungeon generation. This project explored various PCG algorithms commonly applied in dungeon generation, analyzing their strengths and limitations. The artifact is an interactive application that demonstrates each algorithm's capabilities by allowing users to adjust map parameters, such as dungeon size, number of rooms, and corridor configurations. This adjustable functionality offers insight into the flexibility and constraints of each algorithm.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="content-section alt reverse">
+        <div class="content-grid">
+
+
+            <div class="text">
+                <h3>Design & Mechanics</h3>
+                <p>
+                    This Project Demonstrates six of the most commonly used PCG methods in the game industry these being The Cellular Automata, Binary Space Partitioning, Perlin noise, Recursive Division, Drunkard walk Algorithm, and the Recursive Backtracking algorithms. This project explored various PCG algorithms commonly applied in dungeon generation, analyzing their strengths and limitations. The artifact is an interactive application that demonstrates each algorithm's capabilities by allowing users to adjust map parameters, such as dungeon size, number of rooms, and corridor configurations. This adjustable functionality offers insight into the flexibility and constraints of each algorithm.
+                </p>
+            </div>
+            <div class="media">
+                <img src="../images/portfoliowebspageimage2.webp" alt="Dungeon Layout Example">
+            </div>
+        </div>
+    </section>
+
+    <!-- GENERATOR DEMO -->
+    <section class="demo">
+        <h3>Live Generator Demo</h3>
+
+        <button onclick="generateDungeon()">Generate Dungeon</button>
+
+        <div id="dungeon" class="dungeon"></div>
+    </section>
+
+    <script>
+        const width = 10;
+        const height = 10;
+
+        function generateDungeon() {
+            const dungeon = document.getElementById("dungeon");
+            dungeon.innerHTML = "";
+
+            for (let i = 0; i < width * height; i++) {
+                const cell = document.createElement("div");
+                cell.className = "cell";
+
+                cell.classList.add(Math.random() > 0.4 ? "floor" : "wall");
+                dungeon.appendChild(cell);
+            }
+        }
+    </script>
+
+</body>
+</html>
