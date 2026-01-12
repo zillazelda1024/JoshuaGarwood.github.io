@@ -1,4 +1,4 @@
-/* RESET */
+﻿/* RESET */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,14 +16,31 @@ body {
 /* NAV */
 .nav {
     background-color: #dff3f5;
-    padding: 1rem 2rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
 }
 
-    .nav a {
+.nav h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+
+
+
+    .nav nav a {
+        margin: 0 1rem;
         text-decoration: none;
         color: #222;
-        font-weight: bold;
+        font-weight: 500;
     }
+
+        .nav nav a:hover {
+            text-decoration: underline;
+        }
+
 
 /* HERO */
 .hero {
