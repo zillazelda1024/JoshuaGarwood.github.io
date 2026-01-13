@@ -66,6 +66,26 @@ body {
         background-color: #e9e5db;
     }
 
+.center-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    background-color: #e9e5db;
+    border-radius: 8px;
+    text-align: center;
+}
+
+    .center-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .center-box p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+
 .content-grid {
     max-width: 1100px;
     margin: 0 auto;
@@ -90,6 +110,19 @@ body {
     width: 100%;
     border-radius: 6px;
 }
+
+.image-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+    .image-pair img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+
 
 /* TEXT */
 .text h3 {
@@ -123,9 +156,10 @@ button {
 }
 
 .cell {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
+
 
 .wall {
     background-color: #222;
@@ -142,6 +176,19 @@ button {
         text-align: center;
     }
 }
+
+@media (max-width: 900px) {
+    .algorithms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .algorithms-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .video-text-section {
     display: flex;
     align-items: flex-start;
@@ -182,10 +229,57 @@ button {
     }
 }
 
-.content-grid .media img {
-    width: 75%; /* half the original size */
-    height: auto; /* maintain aspect ratio */
-    display: block; /* prevent inline spacing issues */
-    margin-bottom: 1rem; /* optional spacing between the two images */
+.video-fallback {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
 }
+
+
+.content-grid .media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ALGORITHMS SECTION */
+.algorithms-section {
+    padding: 4rem 1rem;
+    background-color: #e9e5db; /* matches your alt sections */
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.algorithms-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.algorithm-card {
+    text-align: center;
+}
+
+    .algorithm-card h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+    }
+
+    .algorithm-card img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        background-color: #9fd6f0; /* light blue frame look */
+        padding: 0.75rem;
+        border-radius: 6px;
+    }
+
 
