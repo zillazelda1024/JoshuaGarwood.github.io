@@ -15,6 +15,7 @@ body {
     line-height: 1.6;
 }
 
+
 main {
   width: 100%;
   max-width: 1200px;
@@ -30,19 +31,18 @@ h1, h2, h3 {
 
 /* ================= NAV ================= */
 .nav {
-  background-color: #dff3f5;
-  padding: 1.5rem;
-  text-align: center;
+    width: 100%;
+    background-color: #dff3f5;
+    padding: 1.5rem;
+    text-align: center;
+}
+
 }
 .nav h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     font-weight: 700;
 }
-
-
-
-
 
 .nav a {
   margin: 0 1rem;
@@ -202,10 +202,7 @@ h1, h2, h3 {
     padding: 0 24px;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-}
+
 
 main {
     width: 100%;
