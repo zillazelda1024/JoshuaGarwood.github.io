@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\HauntedHouse\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HauntedHouse\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\HauntedHouse\\dungeon.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:HauntedHouse\\dungeon.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
@@ -18,19 +26,66 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dungeon.css",
+              "DocumentMoniker": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\HauntedHouse\\dungeon.css",
+              "RelativeDocumentMoniker": "HauntedHouse\\dungeon.css",
+              "ToolTip": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\HauntedHouse\\dungeon.css",
+              "RelativeToolTip": "HauntedHouse\\dungeon.css",
+              "ViewState": "AgIAAB0BAAAAAAAAAAAAADoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-16T20:04:18.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\HauntedHouse\\index.html",
+              "RelativeDocumentMoniker": "HauntedHouse\\index.html",
+              "ToolTip": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\HauntedHouse\\index.html",
+              "RelativeToolTip": "HauntedHouse\\index.html",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAAMgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-01-16T20:07:21.735Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "fe37c288-6796-4b44-8884-58ac80f9fbd1",
+        "Display": 1,
+        "X": 521,
+        "Y": 132,
+        "Width": 911,
+        "Height": 1150,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\css\\style.css",
               "RelativeDocumentMoniker": "css\\style.css",
               "ToolTip": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\css\\style.css",
               "RelativeToolTip": "css\\style.css",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJkBAAAAAAAAAAAYwKwBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-12T19:33:20.82Z",
+              "WhenOpened": "2026-01-16T19:48:35.914Z",
               "EditorCaption": ""
             },
             {
@@ -41,7 +96,7 @@
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAALYAAAAAAAAAAAAkwNgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-01-12T19:33:18.829Z",
               "EditorCaption": ""
