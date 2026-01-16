@@ -1,0 +1,315 @@
+﻿/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* GLOBAL */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #f3f0e8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* NAV */
+.nav {
+    background-color: #dff3f5;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.nav h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+
+
+
+    .nav nav a {
+        margin: 0 1rem;
+        text-decoration: none;
+        color: #222;
+        font-weight: 500;
+    }
+
+        .nav nav a:hover {
+            text-decoration: underline;
+        }
+
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem 3rem;
+}
+
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+/* CONTENT SECTIONS */
+.content-section {
+    padding: 3rem 1rem;
+}
+
+    .content-section.alt {
+        background-color: #e9e5db;
+    }
+
+.center-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    background-color: #e9e5db;
+    border-radius: 8px;
+    text-align: center;
+}
+
+    .center-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .center-box p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+
+.content-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    /* Reverse layout (image right, text left) */
+    .reverse .content-grid
+
+{
+    direction: rtl;
+}
+
+.reverse .content-grid > * {
+    direction: ltr;
+}
+
+}
+
+.media img {
+    width: 150%;
+    border-radius: 6px;
+}
+
+.image-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+    .image-pair img {
+        width: 90%;
+        height: auto;
+        border-radius: 6px;
+    }
+
+    .image-pair.stack {
+        grid-template-columns: 1fr;
+    }
+
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+    .screenshots-grid img {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 6px;
+    }
+
+
+
+/* TEXT */
+.text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.text p {
+    font-size: 1rem;
+}
+
+/* DEMO */
+.demo {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+/* DUNGEON GRID */
+.dungeon {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    justify-content: center;
+    gap: 2px;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+}
+
+
+.wall {
+    background-color: #222;
+}
+
+.floor {
+    background-color: #00bfa5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .algorithms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .algorithms-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+    .screenshots-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.video-text-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #e0ddd8;
+    max-width: 1100px; /* Limit the overall width */
+    margin-left: auto; /* Center the block horizontally */
+    margin-right: auto; /* Center the block horizontally */
+}
+
+
+
+.text-content {
+    flex: 1; /* Take remaining space */
+    max-width: 600px; /* Optional max width */
+}
+
+.video-wrapper {
+    flex: 1;
+    max-width: 560px;
+}
+
+    .video-wrapper iframe {
+        width: 100%;
+        height: 315px;
+        border-radius: 8px;
+    }
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+    .video-text-section {
+        flex-direction: column;
+    }
+
+    .video-wrapper iframe {
+        height: 240px;
+    }
+}
+
+.video-fallback {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+.content-grid .media img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ALGORITHMS SECTION */
+.algorithms-section {
+    padding: 4rem 1rem;
+    background-color: #e9e5db; /* matches your alt sections */
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.algorithms-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.algorithms-grid {
+    justify-items: center;
+}
+
+
+.algorithm-card {
+    text-align: center;
+}
+
+    .algorithm-card h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+    }
+
+    .algorithm-card img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        padding: 0.75rem;
+        border-radius: 6px;
+    }
