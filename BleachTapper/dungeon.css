@@ -20,11 +20,11 @@ body {
     text-align: center;
 }
 
-.nav h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 700;
-}
+    .nav h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-weight: 700;
+    }
 
 
 
@@ -107,7 +107,7 @@ body {
 }
 
 .media img {
-    width: 150%;
+    width: 100%;
     border-radius: 6px;
 }
 
@@ -210,6 +210,7 @@ button {
         grid-template-columns: 1fr;
     }
 }
+
 @media (max-width: 768px) {
     .screenshots-grid {
         grid-template-columns: 1fr;
@@ -287,8 +288,9 @@ button {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 3rem;
+    justify-items: center;
 }
 
 .algorithms-grid {
@@ -297,8 +299,11 @@ button {
 
 
 .algorithm-card {
+    width: 100%;
+    max-width: 260px;
     text-align: center;
 }
+
 
     .algorithm-card h4 {
         font-size: 1rem;
@@ -310,6 +315,7 @@ button {
         width: 100%;
         max-width: 220px;
         height: auto;
+        background-color: #808080; /* light blue frame look */
         padding: 0.75rem;
         border-radius: 6px;
     }
