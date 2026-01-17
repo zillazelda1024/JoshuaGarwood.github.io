@@ -26,7 +26,13 @@
 }
 
 
-
+.text,
+.about-text,
+.center-box p {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 /* ================= GLOBAL ================= */
@@ -34,7 +40,7 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     background-color: var(--bg-main);
     color: var(--text-primary);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
@@ -82,6 +88,35 @@ h1, h2, h3 {
             opacity: 1;
             color: #ffffff;
         }
+    .nav nav a.active {
+        color: #ffffff;
+        opacity: 1;
+        position: relative;
+    }
+
+        .nav nav a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 2px;
+            background-color: #3b82f6;
+            border-radius: 2px;
+        }
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+h3 {
+    font-size: 1.35rem;
+}
+
 
 .hero {
     position: relative;
@@ -289,7 +324,12 @@ a {
     opacity: 0.55;
     transform: scale(0.92);
     transition: all 0.35s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+    .project:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    }
 
     .project.active {
         opacity: 1;
@@ -386,6 +426,30 @@ a:focus-visible {
 
 /* ================= ABOUT ME ================= */
 
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #2f2f2f; /* dark footer background */
+    color: #e5e7eb; /* light text */
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+    .footer p {
+        margin: 0.5rem 0;
+        font-size: 0.95rem;
+    }
+
+    .footer a {
+        color: #e5e7eb;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .footer a:hover {
+            color: #ffffff;
+        }
 
 .about {
     max-width: 800px;
@@ -445,8 +509,9 @@ a:focus-visible {
 
 /* ================= TIGHTER CAROUSEL STACKING ================= */
 .section + .section {
-  padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.06);
 }
+
 
 .section:first-of-type {
   padding-bottom: 2rem;
@@ -516,6 +581,7 @@ main {
         height: 315px;
         border-radius: 8px;
     }
+
 
 /* Responsive: stack on smaller screens */
 @media (max-width: 768px) {
@@ -640,3 +706,37 @@ main {
         color: rgba(255, 255, 255, 0.85);
         position: relative;
     }
+
+/* ================= FOOTER ================= */
+/* Make the page take full height so footer is at bottom */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .footer {
+        background-color: #111827;
+        color: #cbd5e1;
+    }
+
+        .footer a {
+            color: #cbd5e1;
+        }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    flex: 1; /* fills available space */
+}
+

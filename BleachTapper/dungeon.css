@@ -13,7 +13,6 @@ body {
     line-height: 1.6;
 }
 
-/* NAV */
 .nav {
     width: 100%;
     background: linear-gradient( to bottom, #3a3a3a, #2f2f2f );
@@ -163,6 +162,30 @@ body {
     font-size: 1rem;
 }
 
+.footer {
+    background-color: #2f2f2f; /* dark footer background */
+    color: #e5e7eb; /* light text */
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+    .footer p {
+        margin: 0.5rem 0;
+        font-size: 0.95rem;
+    }
+
+    .footer a {
+        color: #e5e7eb;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .footer a:hover {
+            color: #ffffff;
+        }
+
 /* DEMO */
 .demo {
     text-align: center;
@@ -188,6 +211,32 @@ button {
     width: 20px;
     height: 20px;
 }
+
+
+.footer {
+    background-color: #2f2f2f; /* dark footer background */
+    color: #e5e7eb; /* light text */
+    text-align: center;
+    padding: 2rem 1rem;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+}
+
+    .footer p {
+        margin: 0.5rem 0;
+        font-size: 0.95rem;
+    }
+
+    .footer a {
+        color: #e5e7eb;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+        .footer a:hover {
+            color: #ffffff;
+        }
+
 
 
 .wall {
