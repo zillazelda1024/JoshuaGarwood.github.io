@@ -18,32 +18,59 @@
 
     <header class="nav">
 
-        <nav>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">3D Work</a>
+        <nav class="nav-menu">
+            <a href="#about">About</a>
+
+            <div class="nav-dropdown">
+                <button class="nav-link">
+                    Projects ▾
+                </button>
+
+                <div class="dropdown-menu">
+                    <a href="PCGDungeonGenerator/index.html">PCG Dungeon Generator</a>
+                    <a href="Nightmare/index.html">Nightmare</a>
+                    <a href="SpellQuest/index.html">Spell Quest</a>
+                    <a href="WhereAmI/index.html"> Wher Am I </a>
+                    <a href="LaunchEm/index.html">Launch Em</a>
+                    <a href="SnakeOdyssey64/index.html">Snake Odyssey 64</a>
+                    <a href="RunFromGary/index.html">Run From Gary</a>
+                    <a href="BleachTapper/index.html">Bleach Tapper</a>
+                    <a href="TheSacrifice/index.html">The Sacrifice</a>
+                    <a href="TempleTap/index.html">The Letter Temple</a>
+                    <a href="DeadMeme/index.html">Dead Meme</a>
+                    <a href="HauntedHouse/index.html">The Haunted House</a>
+                       
+                </div>
+
+            </div>
+
+            <a href="#greyboxing">3D Work</a>
         </nav>
+
     </header>
+
+    <section class="hero">
+        <h1>Joshua Garwood</h1>
+        <h2>Game Designer & Developer</h2>
+
+        <ul class="skills">
+            <li>Unity & C# Gameplay Programming</li>
+            <li>Level & World Design</li>
+            <li>Procedural Generation</li>
+            <li>Blender (2D & 3D)</li>
+        </ul>
+
+
+    </section>
+
     <div class="page-wrapper">
 
-        <section class="hero">
-            <h1>Joshua Garwood</h1>
-            <h2>Game Designer & Developer</h2>
 
-            <ul class="skills">
-                <li>Unity & C# Gameplay Programming</li>
-                <li>Level & World Design</li>
-                <li>Procedural Generation</li>
-                <li>Blender (2D & 3D)</li>
-            </ul>
-
-
-        </section>
 
 
         <!-- ================= ABOUT ME ================= -->
         <section class="section about-section">
-            <section class="section about">
+            <section class="section about" id="about">
                 <h2>About Me</h2>
 
                 <p class="about-text">
@@ -277,7 +304,7 @@
             </script>
         </section>
     </div>
-   
+
 
     <footer class="footer">
         <p>© Joshua Garwood · Game Designer</p>
