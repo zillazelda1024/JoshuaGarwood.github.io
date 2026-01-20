@@ -279,14 +279,11 @@
                             item.classList.toggle('active', i === index)
                         );
 
-                        const itemWidth = items[0].offsetWidth + 48;
-                        const wrapperWidth = wrapper.offsetWidth;
-
-                        const offset =
-                            -(index * itemWidth) +
-                            (wrapperWidth / 2 - itemWidth / 2);
-
-                        carousel.style.transform = `translateX(${offset}px)`;
+                        items[index].scrollIntoView({
+                            behavior: "smooth",
+                            inline: "center",
+                            block: "nearest"
+                        });
                     }
 
                     leftBtn.onclick = () => {
@@ -302,6 +299,8 @@
                     updateCarousel();
                 });
             </script>
+
+
         </section>
     </div>
 
