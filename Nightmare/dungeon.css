@@ -20,36 +20,65 @@ body {
     background: linear-gradient( to bottom, #3a3a3a, #2f2f2f );
     padding: 1.25rem 1.5rem;
     text-align: center;
+    /* Depth */
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
+
+
+
+
     .nav h1 {
         font-family: 'Playfair Display', serif;
-        font-size: 1.75rem;
+        font-size: 2rem;
         font-weight: 700;
-        color: #f8fafc;
-        margin-bottom: 0.5rem;
     }
 
-    /* Nav links */
-    .nav nav a {
+    .nav a {
         margin: 0 1rem;
         text-decoration: none;
-        font-family: 'Inter', sans-serif;
-        color: #e5e7eb;
+        color: #e5e7eb; /* soft off-white */
         font-weight: 500;
         opacity: 0.85;
         transition: opacity 0.2s ease, color 0.2s ease;
     }
 
-        .nav nav a:hover {
+        .nav a:hover {
             opacity: 1;
             color: #ffffff;
         }
 
+    .nav nav a.active {
+        color: #ffffff;
+        opacity: 1;
+        position: relative;
+    }
+
+        .nav nav a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 2px;
+            background-color: #3b82f6;
+            border-radius: 2px;
+        }
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+h3 {
+    font-size: 1.35rem;
+}
 
 .nav-menu {
     display: flex;
@@ -242,12 +271,12 @@ body {
     padding: 4rem 1rem;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 1.5rem;
-}
+    .demo button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+    }
 
 /* DUNGEON GRID */
 .dungeon {
