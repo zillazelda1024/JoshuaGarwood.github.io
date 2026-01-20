@@ -50,7 +50,8 @@
     </header>
 
     <section class="hero">
-        <h1>Joshua Garwood</h1>
+        <h1>Joshua Garwood's</h1>
+        <h1>Game Design Portfoilio</h1>
         <h2>Game Designer & Developer</h2>
 
         <ul class="skills">
@@ -252,57 +253,66 @@
                 </div>
             </section>
 
-            <section>
-                <h2> Grey Boxing Showcase</h2>
-                <div class="center-box">
-                    <video width="100%" controls>
-                        <source src="videos/BlenderMdoels.mp4" type="video/mp4">
+            <!-- ================= ABOUT ME ================= -->
+            <section class="section about-section">
+                <section class="section about" id="about">
+                    <h2> Grey Boxing Showcase</h2>
+                    <div class="center-box">
+                        <video width="100%" controls>
+                            <source src="videos/BlenderMdoels.mp4" type="video/mp4">
 
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </section>
+
+
+
+                <!-- ================= JS ================= -->
+                <script>
+                    document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+                        const carousel = wrapper.querySelector('.carousel');
+                        const items = wrapper.querySelectorAll('.project');
+                        const leftBtn = wrapper.querySelector('.carousel-btn.left');
+                        const rightBtn = wrapper.querySelector('.carousel-btn.right');
+
+                        let index = 0;
+                        let hasInteracted = false; // 👈 key fix
+
+                        function updateCarousel() {
+                            items.forEach((item, i) =>
+                                item.classList.toggle('active', i === index)
+                            );
+
+                            if (hasInteracted) {
+                                items[index].scrollIntoView({
+                                    behavior: "smooth",
+                                    inline: "center",
+                                    block: "nearest"
+                                });
+                            }
+                        }
+
+                        leftBtn.onclick = () => {
+                            hasInteracted = true;
+                            index = (index - 1 + items.length) % items.length;
+                            updateCarousel();
+                        };
+
+                        rightBtn.onclick = () => {
+                            hasInteracted = true;
+                            index = (index + 1) % items.length;
+                            updateCarousel();
+                        };
+
+                        updateCarousel(); // initial state WITHOUT scrolling
+                    });
+                </script>
+
+
+
             </section>
-
-
-            <!-- ================= JS ================= -->
-            <script>
-                document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
-                    const carousel = wrapper.querySelector('.carousel');
-                    const items = wrapper.querySelectorAll('.project');
-                    const leftBtn = wrapper.querySelector('.carousel-btn.left');
-                    const rightBtn = wrapper.querySelector('.carousel-btn.right');
-
-                    let index = 0;
-
-                    function updateCarousel() {
-                        items.forEach((item, i) =>
-                            item.classList.toggle('active', i === index)
-                        );
-
-                        items[index].scrollIntoView({
-                            behavior: "smooth",
-                            inline: "center",
-                            block: "nearest"
-                        });
-                    }
-
-                    leftBtn.onclick = () => {
-                        index = (index - 1 + items.length) % items.length;
-                        updateCarousel();
-                    };
-
-                    rightBtn.onclick = () => {
-                        index = (index + 1) % items.length;
-                        updateCarousel();
-                    };
-
-                    updateCarousel();
-                });
-            </script>
-
-
-        </section>
-    </div>
+</div>
 
 
     <footer class="footer">
