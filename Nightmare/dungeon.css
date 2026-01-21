@@ -192,12 +192,14 @@ h3 {
 
 .center-box {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 3.5rem; /* 👈 adds space below */
     padding: 2.5rem 2rem;
     background-color: rgba(255, 255, 255, 0.92);
     border-radius: 8px;
     text-align: center;
+    gap: 1.5rem;
 }
+
 
     .center-box h3 {
         font-size: 1.5rem;
