@@ -35,13 +35,14 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\BleachTapper\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\BleachTapper\\index.html",
-              "RelativeToolTip": "index.html",
+              "DocumentMoniker": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\index.html",
+              "RelativeDocumentMoniker": "..\\index.html",
+              "ToolTip": "C:\\Users\\Owner\\Documents\\JoshuaGarwoodsPortfoilio\\JoshuaGarwood.github.io\\index.html",
+              "RelativeToolTip": "..\\index.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-01-16T18:34:11.017Z"
+              "WhenOpened": "2026-01-16T18:34:11.017Z",
+              "EditorCaption": ""
             }
           ]
         }

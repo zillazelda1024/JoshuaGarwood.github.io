@@ -378,6 +378,9 @@ a {
     color: #555;
 }
 
+/* === GREYBOXING HOVER ZOOM PREVIEW === */
+
+
 
 
 /* ================= CAROUSEL ================= */
@@ -458,6 +461,7 @@ a:focus-visible {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 0.75rem;
+    transition: transform 0.35s ease, object-fit 0.35s ease;
 }
 
 
@@ -661,6 +665,7 @@ a:focus-visible {
     flex-direction: column;
     min-height: 100vh;
 }
+
 
 
 
@@ -883,3 +888,47 @@ body {
 main {
     flex: 1;
 }
+/* ================= LIGHTBOX ================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    cursor: zoom-out;
+}
+
+    .lightbox img {
+        max-width: 95vw;
+        max-height: 95vh;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+    }
+.lightbox-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 1rem;
+    z-index: 10000;
+    opacity: 0.8;
+}
+
+    .lightbox-btn:hover {
+        opacity: 1;
+    }
+
+    .lightbox-btn.left {
+        left: 2rem;
+    }
+
+    .lightbox-btn.right {
+        right: 2rem;
+    }
